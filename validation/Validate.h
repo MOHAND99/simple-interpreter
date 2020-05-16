@@ -7,7 +7,7 @@
 #include <iostream>
 #include "string"
 #include <list>
-#include "../statement/Classify.h"
+#include "../Classify.h"
 
 using namespace std;
 
