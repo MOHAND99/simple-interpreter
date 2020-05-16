@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/simple_interpreter.dir/FileReader.cpp.obj"
+  "CMakeFiles/simple_interpreter.dir/datastructure/Stack.cpp.obj"
   "CMakeFiles/simple_interpreter.dir/evaluate/Evaluate.cpp.obj"
   "CMakeFiles/simple_interpreter.dir/evaluate/EvaluateArithmeticStatment.cpp.obj"
   "CMakeFiles/simple_interpreter.dir/evaluate/EvaluateConditionStatement.cpp.obj"

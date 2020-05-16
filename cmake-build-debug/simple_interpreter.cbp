@@ -86,6 +86,12 @@
 		<Unit filename="C:/Users/Zayton/CLionProjects/A/simple-interpreter/FileReader.h">
 			<Option target="simple_interpreter"/>
 		</Unit>
+		<Unit filename="C:/Users/Zayton/CLionProjects/A/simple-interpreter/datastructure/Stack.cpp">
+			<Option target="simple_interpreter"/>
+		</Unit>
+		<Unit filename="C:/Users/Zayton/CLionProjects/A/simple-interpreter/datastructure/Stack.h">
+			<Option target="simple_interpreter"/>
+		</Unit>
 		<Unit filename="C:/Users/Zayton/CLionProjects/A/simple-interpreter/evaluate/Evaluate.cpp">
 			<Option target="simple_interpreter"/>
 		</Unit>

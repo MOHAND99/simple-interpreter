@@ -149,6 +149,33 @@ FileReader.cpp.s:
 	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/FileReader.cpp.s
 .PHONY : FileReader.cpp.s
 
+datastructure/Stack.obj: datastructure/Stack.cpp.obj
+
+.PHONY : datastructure/Stack.obj
+
+# target to build an object file
+datastructure/Stack.cpp.obj:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/datastructure/Stack.cpp.obj
+.PHONY : datastructure/Stack.cpp.obj
+
+datastructure/Stack.i: datastructure/Stack.cpp.i
+
+.PHONY : datastructure/Stack.i
+
+# target to preprocess a source file
+datastructure/Stack.cpp.i:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/datastructure/Stack.cpp.i
+.PHONY : datastructure/Stack.cpp.i
+
+datastructure/Stack.s: datastructure/Stack.cpp.s
+
+.PHONY : datastructure/Stack.s
+
+# target to generate assembly for a file
+datastructure/Stack.cpp.s:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/datastructure/Stack.cpp.s
+.PHONY : datastructure/Stack.cpp.s
+
 evaluate/Evaluate.obj: evaluate/Evaluate.cpp.obj
 
 .PHONY : evaluate/Evaluate.obj
@@ -485,6 +512,9 @@ help:
 	@echo ... FileReader.obj
 	@echo ... FileReader.i
 	@echo ... FileReader.s
+	@echo ... datastructure/Stack.obj
+	@echo ... datastructure/Stack.i
+	@echo ... datastructure/Stack.s
 	@echo ... evaluate/Evaluate.obj
 	@echo ... evaluate/Evaluate.i
 	@echo ... evaluate/Evaluate.s

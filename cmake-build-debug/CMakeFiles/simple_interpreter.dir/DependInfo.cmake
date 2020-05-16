@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Zayton/CLionProjects/A/simple-interpreter/FileReader.cpp" "C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/FileReader.cpp.obj"
+  "C:/Users/Zayton/CLionProjects/A/simple-interpreter/datastructure/Stack.cpp" "C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/datastructure/Stack.cpp.obj"
   "C:/Users/Zayton/CLionProjects/A/simple-interpreter/evaluate/Evaluate.cpp" "C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/evaluate/Evaluate.cpp.obj"
   "C:/Users/Zayton/CLionProjects/A/simple-interpreter/evaluate/EvaluateArithmeticStatment.cpp" "C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/evaluate/EvaluateArithmeticStatment.cpp.obj"
   "C:/Users/Zayton/CLionProjects/A/simple-interpreter/evaluate/EvaluateConditionStatement.cpp" "C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/evaluate/EvaluateConditionStatement.cpp.obj"
