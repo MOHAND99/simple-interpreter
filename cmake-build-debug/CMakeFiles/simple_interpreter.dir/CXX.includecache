@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Zayton/CLionProjects/A/simple-interpreter/main.cpp
+iostream
+-
+string
+-
+validation/Validate.h
+C:/Users/Zayton/CLionProjects/A/simple-interpreter/validation/Validate.h
+
+C:/Users/Zayton/CLionProjects/A/simple-interpreter/validation/Validate.h
+iostream
+-
+string
+C:/Users/Zayton/CLionProjects/A/simple-interpreter/validation/string
+

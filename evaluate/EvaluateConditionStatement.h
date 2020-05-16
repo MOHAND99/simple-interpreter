@@ -7,8 +7,9 @@
 #include "Evaluate.h"
 
 
-class EvaluateConditionStatement {
-
+class EvaluateConditionStatement : public Evaluate {
+public:
+    string evaluateStatement();
 };
 
 

@@ -4,9 +4,15 @@
 
 #ifndef SIMPLE_INTERPRETER_SOLVEDSTATEMENT_H
 #define SIMPLE_INTERPRETER_SOLVEDSTATEMENT_H
-
-
+#include <iostream>
+#include "string"
+#include "list"
+using namespace std;
 class SolvedStatement {
+private:
+    list<string> solvedList;
+public:
+    SolvedStatement(list<string> solvedList);
 
 };
 

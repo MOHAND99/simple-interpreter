@@ -7,8 +7,10 @@
 #include "Evaluate.h"
 
 
-class EvaluateFunction {
+class EvaluateFunction : public Evaluate {
 
+public:
+     string evaluateStatement();
 };
 
 

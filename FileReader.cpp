@@ -3,3 +3,11 @@
 //
 
 #include "FileReader.h"
+
+FileReader::FileReader(string fileName) {
+
+}
+
+void FileReader::readFile() {
+
+}

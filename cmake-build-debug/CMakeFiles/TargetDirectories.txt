@@ -1,0 +1,3 @@
+C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir
+C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/rebuild_cache.dir

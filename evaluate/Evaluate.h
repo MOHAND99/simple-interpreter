@@ -4,15 +4,15 @@
 
 #ifndef SIMPLE_INTERPRETER_EVALUATE_H
 #define SIMPLE_INTERPRETER_EVALUATE_H
-
-#include "Statement.h"
+#include <iostream>
+#include "../statement/SolvedStatement.h"
 #include <list>
 #include <string>
 using namespace std;
 
 class Evaluate {
 private:
-    list<>
+    SolvedStatement solvedStatement;
 public:
     virtual string evaluateStatement() = 0;
 };

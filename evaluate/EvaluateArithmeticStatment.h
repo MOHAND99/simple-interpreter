@@ -9,6 +9,8 @@
 
 class EvaluateArithmeticStatment : public Evaluate {
 
+public:
+    string evaluateStatement() override;
 };
 
 
