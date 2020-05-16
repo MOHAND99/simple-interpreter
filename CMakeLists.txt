@@ -3,4 +3,4 @@ project(simple_interpreter)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(simple_interpreter main.cpp)
+add_executable(simple_interpreter main.cpp Sources/FileReader.cpp Headers/FileReader.h)

@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\SSP\4th term\DS\simple-interpreter"
+CMAKE_SOURCE_DIR = "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\SSP\4th term\DS\simple-interpreter\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\SSP\4th term\DS\simple-interpreter\cmake-build-debug\CMakeFiles" "D:\SSP\4th term\DS\simple-interpreter\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\cmake-build-debug\CMakeFiles" "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\SSP\4th term\DS\simple-interpreter\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -122,32 +122,32 @@ simple_interpreter/fast:
 	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/build
 .PHONY : simple_interpreter/fast
 
-Test.obj: Test.cpp.obj
+Headers/FileReader.obj: Headers/FileReader.cpp.obj
 
-.PHONY : Test.obj
+.PHONY : Headers/FileReader.obj
 
 # target to build an object file
-Test.cpp.obj:
-	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Test.cpp.obj
-.PHONY : Test.cpp.obj
+Headers/FileReader.cpp.obj:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.obj
+.PHONY : Headers/FileReader.cpp.obj
 
-Test.i: Test.cpp.i
+Headers/FileReader.i: Headers/FileReader.cpp.i
 
-.PHONY : Test.i
+.PHONY : Headers/FileReader.i
 
 # target to preprocess a source file
-Test.cpp.i:
-	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Test.cpp.i
-.PHONY : Test.cpp.i
+Headers/FileReader.cpp.i:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.i
+.PHONY : Headers/FileReader.cpp.i
 
-Test.s: Test.cpp.s
+Headers/FileReader.s: Headers/FileReader.cpp.s
 
-.PHONY : Test.s
+.PHONY : Headers/FileReader.s
 
 # target to generate assembly for a file
-Test.cpp.s:
-	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Test.cpp.s
-.PHONY : Test.cpp.s
+Headers/FileReader.cpp.s:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.s
+.PHONY : Headers/FileReader.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -185,9 +185,9 @@ help:
 	@echo ... simple_interpreter
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Test.obj
-	@echo ... Test.i
-	@echo ... Test.s
+	@echo ... Headers/FileReader.obj
+	@echo ... Headers/FileReader.i
+	@echo ... Headers/FileReader.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/simple_interpreter.dir/Test.cpp.obj"
+  "CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.obj"
   "CMakeFiles/simple_interpreter.dir/main.cpp.obj"
   "libsimple_interpreter.dll.a"
   "simple_interpreter.exe"
