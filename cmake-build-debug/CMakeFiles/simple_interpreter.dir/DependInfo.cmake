@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/Zayton/CLionProjects/A/simple-interpreter/Classify.cpp" "C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/Classify.cpp.obj"
   "C:/Users/Zayton/CLionProjects/A/simple-interpreter/FileReader.cpp" "C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/FileReader.cpp.obj"
   "C:/Users/Zayton/CLionProjects/A/simple-interpreter/datastructure/Stack.cpp" "C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/datastructure/Stack.cpp.obj"
   "C:/Users/Zayton/CLionProjects/A/simple-interpreter/evaluate/Evaluate.cpp" "C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/evaluate/Evaluate.cpp.obj"
@@ -12,7 +13,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Zayton/CLionProjects/A/simple-interpreter/evaluate/EvaluateFunction.cpp" "C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/evaluate/EvaluateFunction.cpp.obj"
   "C:/Users/Zayton/CLionProjects/A/simple-interpreter/main.cpp" "C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/main.cpp.obj"
   "C:/Users/Zayton/CLionProjects/A/simple-interpreter/statement/ArithmeticStatement.cpp" "C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/statement/ArithmeticStatement.cpp.obj"
-  "C:/Users/Zayton/CLionProjects/A/simple-interpreter/statement/Classify.cpp" "C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/statement/Classify.cpp.obj"
   "C:/Users/Zayton/CLionProjects/A/simple-interpreter/statement/ConditionStatmenet.cpp" "C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/statement/ConditionStatmenet.cpp.obj"
   "C:/Users/Zayton/CLionProjects/A/simple-interpreter/statement/FunctionStatement.cpp" "C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/statement/FunctionStatement.cpp.obj"
   "C:/Users/Zayton/CLionProjects/A/simple-interpreter/statement/SolvedStatement.cpp" "C:/Users/Zayton/CLionProjects/A/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/statement/SolvedStatement.cpp.obj"

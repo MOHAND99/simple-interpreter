@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/simple_interpreter.dir/Classify.cpp.obj"
   "CMakeFiles/simple_interpreter.dir/FileReader.cpp.obj"
   "CMakeFiles/simple_interpreter.dir/datastructure/Stack.cpp.obj"
   "CMakeFiles/simple_interpreter.dir/evaluate/Evaluate.cpp.obj"
@@ -7,7 +8,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/simple_interpreter.dir/evaluate/EvaluateFunction.cpp.obj"
   "CMakeFiles/simple_interpreter.dir/main.cpp.obj"
   "CMakeFiles/simple_interpreter.dir/statement/ArithmeticStatement.cpp.obj"
-  "CMakeFiles/simple_interpreter.dir/statement/Classify.cpp.obj"
   "CMakeFiles/simple_interpreter.dir/statement/ConditionStatmenet.cpp.obj"
   "CMakeFiles/simple_interpreter.dir/statement/FunctionStatement.cpp.obj"
   "CMakeFiles/simple_interpreter.dir/statement/SolvedStatement.cpp.obj"

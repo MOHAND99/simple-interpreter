@@ -122,6 +122,33 @@ simple_interpreter/fast:
 	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/build
 .PHONY : simple_interpreter/fast
 
+Classify.obj: Classify.cpp.obj
+
+.PHONY : Classify.obj
+
+# target to build an object file
+Classify.cpp.obj:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Classify.cpp.obj
+.PHONY : Classify.cpp.obj
+
+Classify.i: Classify.cpp.i
+
+.PHONY : Classify.i
+
+# target to preprocess a source file
+Classify.cpp.i:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Classify.cpp.i
+.PHONY : Classify.cpp.i
+
+Classify.s: Classify.cpp.s
+
+.PHONY : Classify.s
+
+# target to generate assembly for a file
+Classify.cpp.s:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Classify.cpp.s
+.PHONY : Classify.cpp.s
+
 FileReader.obj: FileReader.cpp.obj
 
 .PHONY : FileReader.obj
@@ -338,33 +365,6 @@ statement/ArithmeticStatement.cpp.s:
 	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/statement/ArithmeticStatement.cpp.s
 .PHONY : statement/ArithmeticStatement.cpp.s
 
-statement/Classify.obj: statement/Classify.cpp.obj
-
-.PHONY : statement/Classify.obj
-
-# target to build an object file
-statement/Classify.cpp.obj:
-	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/statement/Classify.cpp.obj
-.PHONY : statement/Classify.cpp.obj
-
-statement/Classify.i: statement/Classify.cpp.i
-
-.PHONY : statement/Classify.i
-
-# target to preprocess a source file
-statement/Classify.cpp.i:
-	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/statement/Classify.cpp.i
-.PHONY : statement/Classify.cpp.i
-
-statement/Classify.s: statement/Classify.cpp.s
-
-.PHONY : statement/Classify.s
-
-# target to generate assembly for a file
-statement/Classify.cpp.s:
-	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/statement/Classify.cpp.s
-.PHONY : statement/Classify.cpp.s
-
 statement/ConditionStatmenet.obj: statement/ConditionStatmenet.cpp.obj
 
 .PHONY : statement/ConditionStatmenet.obj
@@ -509,6 +509,9 @@ help:
 	@echo ... simple_interpreter
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Classify.obj
+	@echo ... Classify.i
+	@echo ... Classify.s
 	@echo ... FileReader.obj
 	@echo ... FileReader.i
 	@echo ... FileReader.s
@@ -533,9 +536,6 @@ help:
 	@echo ... statement/ArithmeticStatement.obj
 	@echo ... statement/ArithmeticStatement.i
 	@echo ... statement/ArithmeticStatement.s
-	@echo ... statement/Classify.obj
-	@echo ... statement/Classify.i
-	@echo ... statement/Classify.s
 	@echo ... statement/ConditionStatmenet.obj
 	@echo ... statement/ConditionStatmenet.i
 	@echo ... statement/ConditionStatmenet.s

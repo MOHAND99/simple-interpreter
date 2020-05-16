@@ -199,18 +199,18 @@ CMakeFiles/simple_interpreter.dir/statement/ConditionStatmenet.cpp.s: cmake_forc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_interpreter.dir/statement/ConditionStatmenet.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Zayton\CLionProjects\A\simple-interpreter\statement\ConditionStatmenet.cpp -o CMakeFiles\simple_interpreter.dir\statement\ConditionStatmenet.cpp.s
 
-CMakeFiles/simple_interpreter.dir/statement/Classify.cpp.obj: CMakeFiles/simple_interpreter.dir/flags.make
-CMakeFiles/simple_interpreter.dir/statement/Classify.cpp.obj: ../statement/Classify.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Zayton\CLionProjects\A\simple-interpreter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/simple_interpreter.dir/statement/Classify.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\simple_interpreter.dir\statement\Classify.cpp.obj -c C:\Users\Zayton\CLionProjects\A\simple-interpreter\statement\Classify.cpp
+CMakeFiles/simple_interpreter.dir/Classify.cpp.obj: CMakeFiles/simple_interpreter.dir/flags.make
+CMakeFiles/simple_interpreter.dir/Classify.cpp.obj: ../Classify.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Zayton\CLionProjects\A\simple-interpreter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/simple_interpreter.dir/Classify.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\simple_interpreter.dir\Classify.cpp.obj -c C:\Users\Zayton\CLionProjects\A\simple-interpreter\Classify.cpp
 
-CMakeFiles/simple_interpreter.dir/statement/Classify.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_interpreter.dir/statement/Classify.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Zayton\CLionProjects\A\simple-interpreter\statement\Classify.cpp > CMakeFiles\simple_interpreter.dir\statement\Classify.cpp.i
+CMakeFiles/simple_interpreter.dir/Classify.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_interpreter.dir/Classify.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Zayton\CLionProjects\A\simple-interpreter\Classify.cpp > CMakeFiles\simple_interpreter.dir\Classify.cpp.i
 
-CMakeFiles/simple_interpreter.dir/statement/Classify.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_interpreter.dir/statement/Classify.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Zayton\CLionProjects\A\simple-interpreter\statement\Classify.cpp -o CMakeFiles\simple_interpreter.dir\statement\Classify.cpp.s
+CMakeFiles/simple_interpreter.dir/Classify.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_interpreter.dir/Classify.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Zayton\CLionProjects\A\simple-interpreter\Classify.cpp -o CMakeFiles\simple_interpreter.dir\Classify.cpp.s
 
 CMakeFiles/simple_interpreter.dir/statement/ArithmeticStatement.cpp.obj: CMakeFiles/simple_interpreter.dir/flags.make
 CMakeFiles/simple_interpreter.dir/statement/ArithmeticStatement.cpp.obj: ../statement/ArithmeticStatement.cpp
@@ -251,7 +251,7 @@ simple_interpreter_OBJECTS = \
 "CMakeFiles/simple_interpreter.dir/FileReader.cpp.obj" \
 "CMakeFiles/simple_interpreter.dir/statement/FunctionStatement.cpp.obj" \
 "CMakeFiles/simple_interpreter.dir/statement/ConditionStatmenet.cpp.obj" \
-"CMakeFiles/simple_interpreter.dir/statement/Classify.cpp.obj" \
+"CMakeFiles/simple_interpreter.dir/Classify.cpp.obj" \
 "CMakeFiles/simple_interpreter.dir/statement/ArithmeticStatement.cpp.obj" \
 "CMakeFiles/simple_interpreter.dir/datastructure/Stack.cpp.obj"
 
@@ -269,7 +269,7 @@ simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/statement/Statement.cp
 simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/FileReader.cpp.obj
 simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/statement/FunctionStatement.cpp.obj
 simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/statement/ConditionStatmenet.cpp.obj
-simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/statement/Classify.cpp.obj
+simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/Classify.cpp.obj
 simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/statement/ArithmeticStatement.cpp.obj
 simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/datastructure/Stack.cpp.obj
 simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/build.make

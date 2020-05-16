@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Zayton/CLionProjects/A/simple-interpreter/Classify.cpp">
+			<Option target="simple_interpreter"/>
+		</Unit>
+		<Unit filename="C:/Users/Zayton/CLionProjects/A/simple-interpreter/Classify.h">
+			<Option target="simple_interpreter"/>
+		</Unit>
 		<Unit filename="C:/Users/Zayton/CLionProjects/A/simple-interpreter/FileReader.cpp">
 			<Option target="simple_interpreter"/>
 		</Unit>
@@ -123,12 +129,6 @@
 			<Option target="simple_interpreter"/>
 		</Unit>
 		<Unit filename="C:/Users/Zayton/CLionProjects/A/simple-interpreter/statement/ArithmeticStatement.h">
-			<Option target="simple_interpreter"/>
-		</Unit>
-		<Unit filename="C:/Users/Zayton/CLionProjects/A/simple-interpreter/statement/Classify.cpp">
-			<Option target="simple_interpreter"/>
-		</Unit>
-		<Unit filename="C:/Users/Zayton/CLionProjects/A/simple-interpreter/statement/Classify.h">
 			<Option target="simple_interpreter"/>
 		</Unit>
 		<Unit filename="C:/Users/Zayton/CLionProjects/A/simple-interpreter/statement/ConditionStatmenet.cpp">
