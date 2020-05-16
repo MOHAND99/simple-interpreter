@@ -122,32 +122,167 @@ simple_interpreter/fast:
 	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/build
 .PHONY : simple_interpreter/fast
 
-Headers/FileReader.obj: Headers/FileReader.cpp.obj
+Headers/AssignmentStatment.obj: Headers/AssignmentStatment.cpp.obj
 
-.PHONY : Headers/FileReader.obj
+.PHONY : Headers/AssignmentStatment.obj
 
 # target to build an object file
-Headers/FileReader.cpp.obj:
-	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.obj
-.PHONY : Headers/FileReader.cpp.obj
+Headers/AssignmentStatment.cpp.obj:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Headers/AssignmentStatment.cpp.obj
+.PHONY : Headers/AssignmentStatment.cpp.obj
 
-Headers/FileReader.i: Headers/FileReader.cpp.i
+Headers/AssignmentStatment.i: Headers/AssignmentStatment.cpp.i
 
-.PHONY : Headers/FileReader.i
+.PHONY : Headers/AssignmentStatment.i
 
 # target to preprocess a source file
-Headers/FileReader.cpp.i:
-	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.i
-.PHONY : Headers/FileReader.cpp.i
+Headers/AssignmentStatment.cpp.i:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Headers/AssignmentStatment.cpp.i
+.PHONY : Headers/AssignmentStatment.cpp.i
 
-Headers/FileReader.s: Headers/FileReader.cpp.s
+Headers/AssignmentStatment.s: Headers/AssignmentStatment.cpp.s
 
-.PHONY : Headers/FileReader.s
+.PHONY : Headers/AssignmentStatment.s
 
 # target to generate assembly for a file
-Headers/FileReader.cpp.s:
-	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.s
-.PHONY : Headers/FileReader.cpp.s
+Headers/AssignmentStatment.cpp.s:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Headers/AssignmentStatment.cpp.s
+.PHONY : Headers/AssignmentStatment.cpp.s
+
+Sources/Evaluate.obj: Sources/Evaluate.cpp.obj
+
+.PHONY : Sources/Evaluate.obj
+
+# target to build an object file
+Sources/Evaluate.cpp.obj:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Sources/Evaluate.cpp.obj
+.PHONY : Sources/Evaluate.cpp.obj
+
+Sources/Evaluate.i: Sources/Evaluate.cpp.i
+
+.PHONY : Sources/Evaluate.i
+
+# target to preprocess a source file
+Sources/Evaluate.cpp.i:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Sources/Evaluate.cpp.i
+.PHONY : Sources/Evaluate.cpp.i
+
+Sources/Evaluate.s: Sources/Evaluate.cpp.s
+
+.PHONY : Sources/Evaluate.s
+
+# target to generate assembly for a file
+Sources/Evaluate.cpp.s:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Sources/Evaluate.cpp.s
+.PHONY : Sources/Evaluate.cpp.s
+
+Sources/FileReader.obj: Sources/FileReader.cpp.obj
+
+.PHONY : Sources/FileReader.obj
+
+# target to build an object file
+Sources/FileReader.cpp.obj:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Sources/FileReader.cpp.obj
+.PHONY : Sources/FileReader.cpp.obj
+
+Sources/FileReader.i: Sources/FileReader.cpp.i
+
+.PHONY : Sources/FileReader.i
+
+# target to preprocess a source file
+Sources/FileReader.cpp.i:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Sources/FileReader.cpp.i
+.PHONY : Sources/FileReader.cpp.i
+
+Sources/FileReader.s: Sources/FileReader.cpp.s
+
+.PHONY : Sources/FileReader.s
+
+# target to generate assembly for a file
+Sources/FileReader.cpp.s:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Sources/FileReader.cpp.s
+.PHONY : Sources/FileReader.cpp.s
+
+Sources/Interpretation.obj: Sources/Interpretation.cpp.obj
+
+.PHONY : Sources/Interpretation.obj
+
+# target to build an object file
+Sources/Interpretation.cpp.obj:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Sources/Interpretation.cpp.obj
+.PHONY : Sources/Interpretation.cpp.obj
+
+Sources/Interpretation.i: Sources/Interpretation.cpp.i
+
+.PHONY : Sources/Interpretation.i
+
+# target to preprocess a source file
+Sources/Interpretation.cpp.i:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Sources/Interpretation.cpp.i
+.PHONY : Sources/Interpretation.cpp.i
+
+Sources/Interpretation.s: Sources/Interpretation.cpp.s
+
+.PHONY : Sources/Interpretation.s
+
+# target to generate assembly for a file
+Sources/Interpretation.cpp.s:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Sources/Interpretation.cpp.s
+.PHONY : Sources/Interpretation.cpp.s
+
+Sources/Statment.obj: Sources/Statment.cpp.obj
+
+.PHONY : Sources/Statment.obj
+
+# target to build an object file
+Sources/Statment.cpp.obj:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Sources/Statment.cpp.obj
+.PHONY : Sources/Statment.cpp.obj
+
+Sources/Statment.i: Sources/Statment.cpp.i
+
+.PHONY : Sources/Statment.i
+
+# target to preprocess a source file
+Sources/Statment.cpp.i:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Sources/Statment.cpp.i
+.PHONY : Sources/Statment.cpp.i
+
+Sources/Statment.s: Sources/Statment.cpp.s
+
+.PHONY : Sources/Statment.s
+
+# target to generate assembly for a file
+Sources/Statment.cpp.s:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Sources/Statment.cpp.s
+.PHONY : Sources/Statment.cpp.s
+
+Sources/Validation.obj: Sources/Validation.cpp.obj
+
+.PHONY : Sources/Validation.obj
+
+# target to build an object file
+Sources/Validation.cpp.obj:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Sources/Validation.cpp.obj
+.PHONY : Sources/Validation.cpp.obj
+
+Sources/Validation.i: Sources/Validation.cpp.i
+
+.PHONY : Sources/Validation.i
+
+# target to preprocess a source file
+Sources/Validation.cpp.i:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Sources/Validation.cpp.i
+.PHONY : Sources/Validation.cpp.i
+
+Sources/Validation.s: Sources/Validation.cpp.s
+
+.PHONY : Sources/Validation.s
+
+# target to generate assembly for a file
+Sources/Validation.cpp.s:
+	$(MAKE) -f CMakeFiles\simple_interpreter.dir\build.make CMakeFiles/simple_interpreter.dir/Sources/Validation.cpp.s
+.PHONY : Sources/Validation.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -185,9 +320,24 @@ help:
 	@echo ... simple_interpreter
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Headers/FileReader.obj
-	@echo ... Headers/FileReader.i
-	@echo ... Headers/FileReader.s
+	@echo ... Headers/AssignmentStatment.obj
+	@echo ... Headers/AssignmentStatment.i
+	@echo ... Headers/AssignmentStatment.s
+	@echo ... Sources/Evaluate.obj
+	@echo ... Sources/Evaluate.i
+	@echo ... Sources/Evaluate.s
+	@echo ... Sources/FileReader.obj
+	@echo ... Sources/FileReader.i
+	@echo ... Sources/FileReader.s
+	@echo ... Sources/Interpretation.obj
+	@echo ... Sources/Interpretation.i
+	@echo ... Sources/Interpretation.s
+	@echo ... Sources/Statment.obj
+	@echo ... Sources/Statment.i
+	@echo ... Sources/Statment.s
+	@echo ... Sources/Validation.obj
+	@echo ... Sources/Validation.i
+	@echo ... Sources/Validation.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

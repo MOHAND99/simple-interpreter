@@ -6,25 +6,23 @@
 #include <fstream>
 #include <iostream>
 
+
 FileReader::FileReader(string filename) {
-    ifstream file;
-    file.open(filename);
-    checkExist(file);
-    read(file);
-    file.close();
+    if (!file.is_open())
+        file.open(filename);
+    checkExist();
 }
 
-void FileReader::checkExist(ifstream file) {
+void FileReader::checkExist() {
     if(file.fail()){
         cout<<"file isn't existed"<<endl;
         exit(EXIT_FAILURE);
     }
 }
 
-void FileReader::read(ifstream file) {
-    string  line;
-    while(getline(file, line)){
-        Evaluate(line);
-    }
+string FileReader::read() {
+    string line;
+    getline(file, line))
+    return line;
 }
 

@@ -1,5 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.obj"
+  "CMakeFiles/simple_interpreter.dir/Headers/AssignmentStatment.cpp.obj"
+  "CMakeFiles/simple_interpreter.dir/Sources/Evaluate.cpp.obj"
+  "CMakeFiles/simple_interpreter.dir/Sources/FileReader.cpp.obj"
+  "CMakeFiles/simple_interpreter.dir/Sources/Interpretation.cpp.obj"
+  "CMakeFiles/simple_interpreter.dir/Sources/Statment.cpp.obj"
+  "CMakeFiles/simple_interpreter.dir/Sources/Validation.cpp.obj"
   "CMakeFiles/simple_interpreter.dir/main.cpp.obj"
   "libsimple_interpreter.dll.a"
   "simple_interpreter.exe"

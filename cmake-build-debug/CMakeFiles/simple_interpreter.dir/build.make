@@ -69,34 +69,109 @@ CMakeFiles/simple_interpreter.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_interpreter.dir/main.cpp.s"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\main.cpp" -o CMakeFiles\simple_interpreter.dir\main.cpp.s
 
-CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.obj: CMakeFiles/simple_interpreter.dir/flags.make
-CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.obj: ../Headers/FileReader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\simple_interpreter.dir\Headers\FileReader.cpp.obj -c "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Headers\FileReader.cpp"
+CMakeFiles/simple_interpreter.dir/Sources/FileReader.cpp.obj: CMakeFiles/simple_interpreter.dir/flags.make
+CMakeFiles/simple_interpreter.dir/Sources/FileReader.cpp.obj: ../Sources/FileReader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/simple_interpreter.dir/Sources/FileReader.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\simple_interpreter.dir\Sources\FileReader.cpp.obj -c "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Sources\FileReader.cpp"
 
-CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Headers\FileReader.cpp" > CMakeFiles\simple_interpreter.dir\Headers\FileReader.cpp.i
+CMakeFiles/simple_interpreter.dir/Sources/FileReader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_interpreter.dir/Sources/FileReader.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Sources\FileReader.cpp" > CMakeFiles\simple_interpreter.dir\Sources\FileReader.cpp.i
 
-CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Headers\FileReader.cpp" -o CMakeFiles\simple_interpreter.dir\Headers\FileReader.cpp.s
+CMakeFiles/simple_interpreter.dir/Sources/FileReader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_interpreter.dir/Sources/FileReader.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Sources\FileReader.cpp" -o CMakeFiles\simple_interpreter.dir\Sources\FileReader.cpp.s
+
+CMakeFiles/simple_interpreter.dir/Sources/Evaluate.cpp.obj: CMakeFiles/simple_interpreter.dir/flags.make
+CMakeFiles/simple_interpreter.dir/Sources/Evaluate.cpp.obj: ../Sources/Evaluate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/simple_interpreter.dir/Sources/Evaluate.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\simple_interpreter.dir\Sources\Evaluate.cpp.obj -c "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Sources\Evaluate.cpp"
+
+CMakeFiles/simple_interpreter.dir/Sources/Evaluate.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_interpreter.dir/Sources/Evaluate.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Sources\Evaluate.cpp" > CMakeFiles\simple_interpreter.dir\Sources\Evaluate.cpp.i
+
+CMakeFiles/simple_interpreter.dir/Sources/Evaluate.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_interpreter.dir/Sources/Evaluate.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Sources\Evaluate.cpp" -o CMakeFiles\simple_interpreter.dir\Sources\Evaluate.cpp.s
+
+CMakeFiles/simple_interpreter.dir/Sources/Validation.cpp.obj: CMakeFiles/simple_interpreter.dir/flags.make
+CMakeFiles/simple_interpreter.dir/Sources/Validation.cpp.obj: ../Sources/Validation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/simple_interpreter.dir/Sources/Validation.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\simple_interpreter.dir\Sources\Validation.cpp.obj -c "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Sources\Validation.cpp"
+
+CMakeFiles/simple_interpreter.dir/Sources/Validation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_interpreter.dir/Sources/Validation.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Sources\Validation.cpp" > CMakeFiles\simple_interpreter.dir\Sources\Validation.cpp.i
+
+CMakeFiles/simple_interpreter.dir/Sources/Validation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_interpreter.dir/Sources/Validation.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Sources\Validation.cpp" -o CMakeFiles\simple_interpreter.dir\Sources\Validation.cpp.s
+
+CMakeFiles/simple_interpreter.dir/Sources/Statment.cpp.obj: CMakeFiles/simple_interpreter.dir/flags.make
+CMakeFiles/simple_interpreter.dir/Sources/Statment.cpp.obj: ../Sources/Statment.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/simple_interpreter.dir/Sources/Statment.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\simple_interpreter.dir\Sources\Statment.cpp.obj -c "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Sources\Statment.cpp"
+
+CMakeFiles/simple_interpreter.dir/Sources/Statment.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_interpreter.dir/Sources/Statment.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Sources\Statment.cpp" > CMakeFiles\simple_interpreter.dir\Sources\Statment.cpp.i
+
+CMakeFiles/simple_interpreter.dir/Sources/Statment.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_interpreter.dir/Sources/Statment.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Sources\Statment.cpp" -o CMakeFiles\simple_interpreter.dir\Sources\Statment.cpp.s
+
+CMakeFiles/simple_interpreter.dir/Sources/Interpretation.cpp.obj: CMakeFiles/simple_interpreter.dir/flags.make
+CMakeFiles/simple_interpreter.dir/Sources/Interpretation.cpp.obj: ../Sources/Interpretation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/simple_interpreter.dir/Sources/Interpretation.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\simple_interpreter.dir\Sources\Interpretation.cpp.obj -c "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Sources\Interpretation.cpp"
+
+CMakeFiles/simple_interpreter.dir/Sources/Interpretation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_interpreter.dir/Sources/Interpretation.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Sources\Interpretation.cpp" > CMakeFiles\simple_interpreter.dir\Sources\Interpretation.cpp.i
+
+CMakeFiles/simple_interpreter.dir/Sources/Interpretation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_interpreter.dir/Sources/Interpretation.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Sources\Interpretation.cpp" -o CMakeFiles\simple_interpreter.dir\Sources\Interpretation.cpp.s
+
+CMakeFiles/simple_interpreter.dir/Headers/AssignmentStatment.cpp.obj: CMakeFiles/simple_interpreter.dir/flags.make
+CMakeFiles/simple_interpreter.dir/Headers/AssignmentStatment.cpp.obj: ../Headers/AssignmentStatment.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/simple_interpreter.dir/Headers/AssignmentStatment.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\simple_interpreter.dir\Headers\AssignmentStatment.cpp.obj -c "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Headers\AssignmentStatment.cpp"
+
+CMakeFiles/simple_interpreter.dir/Headers/AssignmentStatment.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_interpreter.dir/Headers/AssignmentStatment.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Headers\AssignmentStatment.cpp" > CMakeFiles\simple_interpreter.dir\Headers\AssignmentStatment.cpp.i
+
+CMakeFiles/simple_interpreter.dir/Headers/AssignmentStatment.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_interpreter.dir/Headers/AssignmentStatment.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\Headers\AssignmentStatment.cpp" -o CMakeFiles\simple_interpreter.dir\Headers\AssignmentStatment.cpp.s
 
 # Object files for target simple_interpreter
 simple_interpreter_OBJECTS = \
 "CMakeFiles/simple_interpreter.dir/main.cpp.obj" \
-"CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.obj"
+"CMakeFiles/simple_interpreter.dir/Sources/FileReader.cpp.obj" \
+"CMakeFiles/simple_interpreter.dir/Sources/Evaluate.cpp.obj" \
+"CMakeFiles/simple_interpreter.dir/Sources/Validation.cpp.obj" \
+"CMakeFiles/simple_interpreter.dir/Sources/Statment.cpp.obj" \
+"CMakeFiles/simple_interpreter.dir/Sources/Interpretation.cpp.obj" \
+"CMakeFiles/simple_interpreter.dir/Headers/AssignmentStatment.cpp.obj"
 
 # External object files for target simple_interpreter
 simple_interpreter_EXTERNAL_OBJECTS =
 
 simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/main.cpp.obj
-simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.obj
+simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/Sources/FileReader.cpp.obj
+simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/Sources/Evaluate.cpp.obj
+simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/Sources/Validation.cpp.obj
+simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/Sources/Statment.cpp.obj
+simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/Sources/Interpretation.cpp.obj
+simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/Headers/AssignmentStatment.cpp.obj
 simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/build.make
 simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/linklibs.rsp
 simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/objects1.rsp
 simple_interpreter.exe: CMakeFiles/simple_interpreter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable simple_interpreter.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Mhnd Bshar\CLionProjects\simple-interpreter\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable simple_interpreter.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\simple_interpreter.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

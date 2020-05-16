@@ -4,7 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Headers/FileReader.cpp" "C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/Headers/FileReader.cpp.obj"
+  "C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Headers/AssignmentStatment.cpp" "C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/Headers/AssignmentStatment.cpp.obj"
+  "C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Sources/Evaluate.cpp" "C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/Sources/Evaluate.cpp.obj"
+  "C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Sources/FileReader.cpp" "C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/Sources/FileReader.cpp.obj"
+  "C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Sources/Interpretation.cpp" "C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/Sources/Interpretation.cpp.obj"
+  "C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Sources/Statment.cpp" "C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/Sources/Statment.cpp.obj"
+  "C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Sources/Validation.cpp" "C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/Sources/Validation.cpp.obj"
   "C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/main.cpp" "C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/cmake-build-debug/CMakeFiles/simple_interpreter.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

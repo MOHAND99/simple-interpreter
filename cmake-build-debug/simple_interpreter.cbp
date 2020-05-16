@@ -80,10 +80,40 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Headers/FileReader.cpp">
+		<Unit filename="C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Headers/AssignmentStatment.cpp">
+			<Option target="simple_interpreter"/>
+		</Unit>
+		<Unit filename="C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Headers/AssignmentStatment.h">
+			<Option target="simple_interpreter"/>
+		</Unit>
+		<Unit filename="C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Headers/Evaluate.h">
 			<Option target="simple_interpreter"/>
 		</Unit>
 		<Unit filename="C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Headers/FileReader.h">
+			<Option target="simple_interpreter"/>
+		</Unit>
+		<Unit filename="C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Headers/Interpretation.h">
+			<Option target="simple_interpreter"/>
+		</Unit>
+		<Unit filename="C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Headers/Statment.h">
+			<Option target="simple_interpreter"/>
+		</Unit>
+		<Unit filename="C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Headers/Validation.h">
+			<Option target="simple_interpreter"/>
+		</Unit>
+		<Unit filename="C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Sources/Evaluate.cpp">
+			<Option target="simple_interpreter"/>
+		</Unit>
+		<Unit filename="C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Sources/FileReader.cpp">
+			<Option target="simple_interpreter"/>
+		</Unit>
+		<Unit filename="C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Sources/Interpretation.cpp">
+			<Option target="simple_interpreter"/>
+		</Unit>
+		<Unit filename="C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Sources/Statment.cpp">
+			<Option target="simple_interpreter"/>
+		</Unit>
+		<Unit filename="C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/Sources/Validation.cpp">
 			<Option target="simple_interpreter"/>
 		</Unit>
 		<Unit filename="C:/Users/Mhnd Bshar/CLionProjects/simple-interpreter/main.cpp">

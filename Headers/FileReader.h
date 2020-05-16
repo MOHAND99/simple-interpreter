@@ -10,10 +10,11 @@ using namespace std;
 
 class FileReader {
 private:
-    void checkExist(ifstream file);
-    void read(ifstream file);
+    fstream file;
+    void checkExist();
 public:
     FileReader(string filename);
+    string read();
 };
 
 #endif //SIMPLE_INTERPRETER_FILEREADER_H
