@@ -14,7 +14,7 @@ private:
     list<string> statement; //linked list to store the file line by line
 public:
     FileReader(string fileName); //take the file name from the main.cpp
-    void readFile(); //read the file line by and store it in list statement
+    string readFile(); //read the file line by and store it in list statement
 
 };
 

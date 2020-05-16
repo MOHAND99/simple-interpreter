@@ -13,12 +13,12 @@ using namespace std;
 
 class Validate {
 private:
-     list<string> statementList;///List received from the file reader
-     list<string> validStatmenet;///statement after validate to sent it to classify class
+     string statementList;///List received from the file reader
+     list<string> validStatement;///statement after validate to sent it to classify class
      Classify classify ;
 public:
-    Validate(list<string> statement);
-    void validationOfSatement();///start to validate every loaded statement from the list
+    Validate(string statement);
+    void validationOfSatement(string statement);///start to validate every loaded statement from the list
     bool checkVariablePalce(string statement);///check the variable palce if more than one on the left
     bool checkFunction(string statement);///Check for the function words {function , endfunction}
     bool checkIfStatement(string statement);///check for if word

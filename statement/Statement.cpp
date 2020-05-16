@@ -4,3 +4,7 @@
 
 #include "Statement.h"
 
+bool Statement::isValid(string statement) {
+    //TODO: to be overrided
+    return false;
+}
