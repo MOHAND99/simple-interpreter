@@ -12,6 +12,7 @@ private:
     EvaluateConditionStatement conditionStatement;
 public:
     void evaluateStatement() override;///Send the condition stat. to evaluate in EvaluateConditionStatement
+    ///We may use goot statment in the cond Statement
 };
 
 
