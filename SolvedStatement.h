@@ -1,0 +1,14 @@
+//
+// Created by Zayton on 5/16/2020.
+//
+
+#ifndef SIMPLE_INTERPRETER_SOLVEDSTATEMENT_H
+#define SIMPLE_INTERPRETER_SOLVEDSTATEMENT_H
+
+
+class SolvedStatement {
+
+};
+
+
+#endif //SIMPLE_INTERPRETER_SOLVEDSTATEMENT_H
