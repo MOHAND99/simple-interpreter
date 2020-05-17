@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    ExpressionEvaluator evaluator = ExpressionEvaluator("(((8+1)-(7-4))+(9-8))");
+    ExpressionEvaluator evaluator = ExpressionEvaluator("(-2+4)*(-5**5)");
     evaluator.addSpace();
 //    FileReader reader("Src.txt");
 //    Interpretation compilation;

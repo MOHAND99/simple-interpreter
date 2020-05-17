@@ -21,13 +21,10 @@ private:
 public:
     ExpressionEvaluator(string expression);
     int evaluateExp();
+    string changeToPost();
+    string repalceVariable();
     void addSpace();
-    void changeToPostifix();
-    string checkOperatorCondition(string ope);
-    bool  checkNumber(string num);
-    string remainderExp(string exp, char oper[]);
-    void addToStack(string oper);
-   // double evaluate(); // For invalid expressions, throw an exception.
+    double evaluate(); // For invalid expressions, throw an exception.
 };
 
 #endif //SIMPLE_INTERPRETER_EXPRESSIONEVALUATOR_H
