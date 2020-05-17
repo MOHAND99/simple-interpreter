@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "Statements/AssignmentStatement.h"
 
 using namespace std;
 
@@ -16,5 +17,12 @@ int main() {
 //        // TODO: Add the variable to BST and heap.
 //
 //    }
+    cout << AssignmentStatement::isValid("X=5");
+    cout << AssignmentStatement::isValid(" XYA  =    5  ");
+    cout << AssignmentStatement::isValid(" 1X  =    5  ");
+    cout << AssignmentStatement::isValid("1X  =    5  ");
+    cout << AssignmentStatement::isValid("1  =    5  ");
+    cout << AssignmentStatement::isValid("X Y  =    5  ");
+    cout << AssignmentStatement::isValid("  X+Y  =    5  ");
     return 0;
 }
