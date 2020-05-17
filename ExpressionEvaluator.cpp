@@ -17,7 +17,7 @@ void ExpressionEvaluator::addSpace() {
     for (int i = 0; i <expLength ; i++) {
         if (expChar[i] =='/'||expChar[i] =='+'||expChar[i] =='('||expChar[i] ==')'||
         (expChar[i] =='*'&& !(expChar[i+1]=='*'))||(i!=0&&expChar[i]=='-'&&expChar[i+1]!='-'&&expChar[i-1]!='/'&&expChar[i-1]!='('
-        &&expChar[i-1]!='+'&&expChar[i-1]!='*'&&expChar[i-1]!=')')){
+        &&expChar[i-1]!='+'&&expChar[i-1]!='*'&&expChar[i-1]!=')'&&expChar[i-1]!=' ')){
             if (i!=0) {
                 space[index] = ' ';
                 index++;
@@ -37,7 +37,6 @@ void ExpressionEvaluator::addSpace() {
             index++;
             i++;
         } else if ((expChar[i]=='-'&&expChar[i+1]=='-')){
-            index++;
             space[index]=' ';
             index++;
             space[index]=expChar[i];
@@ -52,6 +51,7 @@ void ExpressionEvaluator::addSpace() {
             index++;
         }
     }
+    space[index]='\0';
     int i;
     string s = "";
     for (i = 0; i <strlen(space); i++) {
