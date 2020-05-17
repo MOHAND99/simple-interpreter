@@ -1,9 +1,11 @@
 #include <iostream>
 #include <string>
-
+#include "ExpressionEvaluator.h"
 using namespace std;
 
 int main() {
+    ExpressionEvaluator evaluator = ExpressionEvaluator("(((8+1)-(7-4))+(9-8))");
+    evaluator.addSpace();
 //    FileReader reader("Src.txt");
 //    Interpretation compilation;
 //    string line;
