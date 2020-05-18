@@ -15,7 +15,7 @@ void ExpressionEvaluator::addSpace() {
     std::copy(expression.begin(), expression.end(), expChar);
     expChar[expLength] = '\0';
     for (int i = 0; i <expLength ; i++) {
-        if (expChar[i] =='/'||expChar[i] =='+'||expChar[i] =='('||expChar[i] ==')'||
+        if (expChar[i] =='/'||expChar[i] =='('||expChar[i] ==')'||
         (expChar[i] =='*'&& !(expChar[i+1]=='*'))||(i!=0&&expChar[i]=='-'&&expChar[i+1]!='-'&&expChar[i-1]!='/'&&expChar[i-1]!='('
         &&expChar[i-1]!='+'&&expChar[i-1]!='*'&&expChar[i-1]!=')'&&expChar[i-1]!=' ')){
             if (i!=0) {
@@ -36,16 +36,75 @@ void ExpressionEvaluator::addSpace() {
             space[index]=' ';
             index++;
             i++;
-        } else if ((expChar[i]=='-'&&expChar[i+1]=='-')){
-            space[index]=' ';
-            index++;
-            space[index]=expChar[i];
-            index++;
-            space[index]=' ';
-            index++;
-            space[index]=expChar[i+1];
-            i++;
+        } else if (expChar[i] =='+'){
+            for (int j = i+1; j <expLength ; j++) {
+                if (isdigit(expChar[j])!=0){
+                    space[index]=' ';
+                    index++;
+                    space[index]='+';
+                    index++;
+                    break;
+                } else if(expChar[j]=='+'){
+                    space[index]=' ';
+                    index++;
+                    space[index]='+';
+                    index++;
+                    space[index]=' ';
+                    index++;
+                    i=j;
+                    break;
+                }
+            }
+        } else if ((expChar[i]=='-')){
+            for (int j = i+1; j <expLength ; j++) {
+                if (isdigit(expChar[j])!=0){
+                    space[index]=' ';
+                    index++;
+                    space[index]='-';
+                    index++;
+                    break;
+                }else if(expChar[j]=='-'){
+                    space[index]=' ';
+                    index++;
+                    space[index]='+';
+                    index++;
+                    space[index]=' ';
+                    index++;
+                    i=j;
+                    break;
+                } else if (expChar[j]=='('){
+                    space[index]=' ';
+                    index++;
+                    space[index]='(';
+                    index++;
+                    space[index]=' ';
+                    index++;
+                    space[index]='-';
+                    index++;
+                    i=j;
+                    break;
+                } else if (expChar[j]=='+'){
+                    space[index]=' ';
+                    index++;
+                    space[index]='-';
+                    index++;
+                    space[index]=' ';
+                    index++;
+                    i=j;
+                    break;
+                }  else if (!isdigit(expChar[j])&&expChar[j]!=' '){
+                    space[index]=' ';
+                    index++;
+                    space[index]='-';
+                    index++;
+                    space[index]=' ';
+                    index++;
+                    j=i;
+                    break;
+                }
+            }
         }
+
         else {
             space[index] = expChar[i];
             index++;
