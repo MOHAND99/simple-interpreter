@@ -43,6 +43,8 @@ void ExpressionEvaluator::addSpace() {
                     index++;
                     space[index]='+';
                     index++;
+                    space[index]=' ';
+                    index++;
                     break;
                 } else if(expChar[j]=='+'){
                     space[index]=' ';
