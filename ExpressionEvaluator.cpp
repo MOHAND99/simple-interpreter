@@ -115,6 +115,19 @@ void ExpressionEvaluator::addSpace() {
     space[index]='\0';
     int i;
     string s = "";
+    for (int k = 0; k <strlen(space) ; k++) {
+        if (space[k]=='-'||space[k]=='+'){
+            for (int j = k; j >=0; j--) {
+//                cout<<j<<space[j]<<endl;
+                if (space[j]=='(')
+                    space[k]=' ';
+                else if (space[j]==' ')
+                    continue;
+                else if (isdigit(space[j])!=0)
+                    break;
+            }
+        }
+    }
     for (i = 0; i <strlen(space); i++) {
         s = s + space[i];
     }
