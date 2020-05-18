@@ -8,6 +8,7 @@ ExpressionEvaluator::ExpressionEvaluator(string expression):expression(expressio
 }
 
 void ExpressionEvaluator::addSpace() {
+    //(--.5)*(-(-0.5)   )     + +10 / -(2)
     int expLength = expression.length();
     int index=0;
     char expChar[expression.length()+1];
@@ -116,17 +117,52 @@ void ExpressionEvaluator::addSpace() {
     int i;
     string s = "";
     for (int k = 0; k <strlen(space) ; k++) {
-        if (space[k]=='+'){
-            for (int j = k; j >=0; j--) {
-                if (space[j]=='(')
-                    space[k]=' ';
-                else if (space[j]==' ')
+        if (space[k] == '+') {
+            for (int j = k; j >= 0; j--) {
+                if (space[j] == '(')
+                    space[k] = ' ';
+                else if (space[j] == ' ')
                     continue;
-                else if (isdigit(space[j])!=0)
+                else if (isdigit(space[j]) != 0)
+                    break;
+            }
+        } else if (space[k] == '-' && isdigit(space[k + 1]) == 0) {
+            for (int j = k + 1; j < strlen(space); j++) {
+                if (space[j] == '-') {
+                    space[j] = ' ';
+                    space[k] = ' ';
+                    space[k]='+';
+                    k--;
+                } else if (space[j] == ' ')
+                    continue;
+                else if (isdigit(space[j]) != 0)
                     break;
             }
         }
     }
+
+//        } else if (space[k]=='-' && isdigit(space[k+1])!=0){
+//            for (int j = k-1; j >=0; j--) {
+//                if (space[j]=='-') {
+//                    space[k] = ' ';
+//                    space[j]=' ';
+//                }
+//                else if (space[j]==' ')
+//                    continue;
+//                else if (isdigit(space[j])!=0)
+//                    break;
+//            }
+//        }else if (space[k]=='-' && isdigit(space[k+1])==0){
+//            for (int j = k; j >=0; j--) {
+//                if (space[j]=='(')
+//                    space[k]=' ';
+//                else if (space[j]==' ')
+//                    continue;
+//                else if (isdigit(space[j])!=0)
+//                    break;
+//            }
+//        }
+
     for (i = 0; i <strlen(space); i++) {
         s = s + space[i];
     }
