@@ -38,7 +38,7 @@ void ExpressionEvaluator::addSpace() {
             i++;
         } else if (expChar[i] == '+') {
             for (int j = i + 1; j < expLength; j++) {
-                if (isdigit(expChar[j]) != 0 || expChar[j] == '(') {
+                if (isdigit(expChar[j]) != 0||expChar[j] =='.'|| expChar[j] == '(') {
                     space[index] = ' ';
                     index++;
                     space[index] = '+';
@@ -49,17 +49,23 @@ void ExpressionEvaluator::addSpace() {
                     break;
                 } else if (expChar[j] == '+' || expChar[j] == ' ') {
                     continue;
-                } else {
-                    cout << "Error" << endl;
+                } else if (expChar[j] == '/'||expChar[j] == '*') {
+                    cout << "Error "<<expChar[j] << endl;
                 }
             }
         } else if ((expChar[i] == '-')) {
             int negCount = 0;
-            int betOprator =0;
+            int postCount=0;
             for (int j = i + 1; j < expLength; j++) {
                 if (isdigit(expChar[j]) != 0 || expChar[j] == '.') {
                     space[index] = ' ';
                     index++;
+                    if (postCount %2 !=0){
+                        space[index] = '-';
+                        index++;
+                        i = j-1;
+                        break;
+                    }
                     if (negCount % 2 != 0) {
                         space[index] = '+';
                         index++;
@@ -70,10 +76,12 @@ void ExpressionEvaluator::addSpace() {
                     index++;
                     i = j - 1;
                     break;
+                } else if (expChar[j] == '+'){
+                  postCount++;
                 } else if (expChar[j] == '(') {
                     space[index] = ' ';
                     index++;
-                    if (negCount ==0){
+                    if (negCount ==0&&expChar[j-1]!=' '&&postCount==0){
                         space[index]='(';
                         index++;
                         space[index]=' ';
@@ -82,13 +90,23 @@ void ExpressionEvaluator::addSpace() {
                         index++;
                         i=j;
                         break;
-                    }
-                    if (negCount % 2 != 0) {
+                    }else if(negCount%2==0){
+                        space[index] = '-';
+                        index++;
+                        i = j-1;
+                        break;
+                    }else if (negCount % 2 != 0) {
                         space[index] = '+';
                         index++;
                         i = j - 1;
                         break;
+                    }else if (postCount!=0){
+                        space[index] = '-';
+                        index++;
+                        i = j-1;
+                        break;
                     }
+
                     space[index] = '-';
                     index++;
                     i = j - 1;
@@ -97,8 +115,8 @@ void ExpressionEvaluator::addSpace() {
                     negCount++;
                 } else if (expChar[j] == ' ') {
                     continue;
-                } else {
-                    cout << "Error" << endl;
+                } else if (expChar[j] == '/'||expChar[j] == '*'){
+                    cout << "Error "<<expChar[j] << endl;
                 }
             }
         } else {
@@ -112,14 +130,25 @@ void ExpressionEvaluator::addSpace() {
 
     for (int k = 0; k < strlen(space); k++) {
       if (space[k] == '-' && isdigit(space[k + 1]) == 0) {
+          int beforeNumber=0;
+          for (int l = k-1; l >= 0; l--) {
+              if (space[l]!=' '&&isdigit(space[l])==0) {
+                  beforeNumber++;
+              }
+              else if(space[l]!=' '){
+                  break;
+              }
 
+          }
             for (int j = k +1; isdigit(space[j]) == 0; j++) {
                 if (isdigit(space[j])==0&&space[j]=='-'){
                     space[j]='+';
                     space[k]=' ';
                 } else if (isdigit(space[j])==0&&space[j]=='+'){
-                    space[j]='-';
-                    space[k]=' ';
+                    if (beforeNumber!=0) {
+                        space[j] = '-';
+                        space[k] = ' ';
+                    }
                 }
             }
         } else if(space[k] == '+' && isdigit(space[k + 1]) == 0){
