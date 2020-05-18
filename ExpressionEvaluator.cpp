@@ -116,9 +116,8 @@ void ExpressionEvaluator::addSpace() {
     int i;
     string s = "";
     for (int k = 0; k <strlen(space) ; k++) {
-        if (space[k]=='-'||space[k]=='+'){
+        if (space[k]=='+'){
             for (int j = k; j >=0; j--) {
-//                cout<<j<<space[j]<<endl;
                 if (space[j]=='(')
                     space[k]=' ';
                 else if (space[j]==' ')
