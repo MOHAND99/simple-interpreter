@@ -4,8 +4,8 @@
 using namespace std;
 
 int main() {
-
-    ExpressionEvaluator evaluator = ExpressionEvaluator("(--.5)*(-(-0.5)   )     + +10 / -(2))");
+    //cout<<isdigit('a');
+    ExpressionEvaluator evaluator = ExpressionEvaluator("55*55/22 ");
     evaluator.addSpace();
 
 //    FileReader reader("Src.txt");
