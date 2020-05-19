@@ -1,3 +1,8 @@
+/*
+ * this class only check that variables names rules applied,
+ * it doesn't check Expression Correctness
+ */
+
 #ifndef SIMPLE_INTERPRETER_ASSIGNMENTSTATEMENT_H
 #define SIMPLE_INTERPRETER_ASSIGNMENTSTATEMENT_H
 
