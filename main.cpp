@@ -4,8 +4,14 @@
 using namespace std;
 
 int main() {
-   
-    ExpressionEvaluator evaluator = ExpressionEvaluator("55*55/22+5");
+    //5 - -(-3 -  +(2))
+    //7 - (--5)
+    //(--.5)*(-(-0.5)   )     + +10 / -(2)
+    //55*55/22+5
+    //55--5
+    string  s = "55*55/22+5";
+    cout<<4 - -4<<endl;
+    ExpressionEvaluator evaluator = ExpressionEvaluator(s);
     evaluator.addSpace();
 
 //    FileReader reader("Src.txt");
