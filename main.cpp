@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Statements/AssignmentStatement.h"
+#include "Evaluation/ExpressionEvaluator.h"
 
 using namespace std;
 
@@ -17,12 +17,23 @@ int main() {
 //        // TODO: Add the variable to BST and heap.
 //
 //    }
-    cout << AssignmentStatement::isValid("X=5");
-    cout << AssignmentStatement::isValid(" XYA  =    5  ");
-    cout << AssignmentStatement::isValid(" 1X  =    5  ");
-    cout << AssignmentStatement::isValid("1X  =    5  ");
-    cout << AssignmentStatement::isValid("1  =    5  ");
-    cout << AssignmentStatement::isValid("X Y  =    5  ");
-    cout << AssignmentStatement::isValid("  X+Y  =    5  ");
+    while (true) {
+        cout << "> ";
+        string line;
+        getline(cin, line);
+        unordered_map<string, double> map;
+        ExpressionEvaluator eval(line, map);
+        try {
+            double result = eval.evaluate();
+            cout << "The result is: " << result << endl << endl;
+        } catch (const char *e) {
+            cout << e << endl;
+        } catch (string e) {
+            cout << e << endl;
+        }
+
+
+    }
+
     return 0;
 }
