@@ -15,7 +15,7 @@ void ExpressionEvaluator::addSpace() {
     expChar[expLength] = '\0';
     for (int i = 0; i < expLength; i++) {
         if (expChar[i] == '/' || expChar[i] == '(' || expChar[i] == ')' ||
-            (expChar[i] == '*' && !(expChar[i + 1] == '*')) || expChar[i] == '+') {
+            (expChar[i] == '*' && !(expChar[i + 1] == '*')) ) {
             if (i != 0) {
                 space[index] = ' ';
                 index++;
@@ -34,7 +34,11 @@ void ExpressionEvaluator::addSpace() {
             space[index] = ' ';
             index++;
             i++;
-        } else if (expChar[i] == '-') {
+        } else if (expChar[i] == '+') {
+            if (i==0){
+                space[index]='+';
+                index++;
+            }
             if (i != 0 && isdigit(expChar[i - 1]) != 0) {
                 space[index] = ' ';
                 index++;
@@ -44,20 +48,48 @@ void ExpressionEvaluator::addSpace() {
                 index++;
             }else if (isdigit(expChar[i + 1]) != 0 || expChar[i + 1] == '.') {
                 for (int j = i - 1; j > 0; j--) {
-                    if (expChar[i] == '-') {
+                    if (expChar[i] == '+') {
                         space[index] = ' ';
                         index++;
-                        space[index] = '-';
+                        space[index] = '+';
                         index++;
                         break;
                     }
                 }
             }else {
-            space[index] = expChar[i];
-            index++;
-            space[index] = ' ';
-            index++;
+                space[index] = expChar[i];
+                index++;
+                space[index] = ' ';
+                index++;
             }
+        }else if (expChar[i] == '-') {
+                if (i==0){
+                    space[index]='-';
+                    index++;
+                }
+                if (i != 0 && isdigit(expChar[i - 1]) != 0) {
+                    space[index] = ' ';
+                    index++;
+                    space[index] = expChar[i];
+                    index++;
+                    space[index] = ' ';
+                    index++;
+                }else if (isdigit(expChar[i + 1]) != 0 || expChar[i + 1] == '.') {
+                    for (int j = i - 1; j > 0; j--) {
+                        if (expChar[i] == '-') {
+                            space[index] = ' ';
+                            index++;
+                            space[index] = '-';
+                            index++;
+                            break;
+                        }
+                    }
+                }else {
+                    space[index] = expChar[i];
+                    index++;
+                    space[index] = ' ';
+                    index++;
+                }
         }else{
             space[index] = expChar[i];
             index++;

@@ -9,7 +9,7 @@ int main() {
     //(--.5)*(-(-0.5)   )     + +10 / -(2)
     //55*55/22+5
     //55--5
-    string  s = "55*55/22+5";
+    string  s = "55*55/22+++5";
     cout<<4 - -4<<endl;
     ExpressionEvaluator evaluator = ExpressionEvaluator(s);
     evaluator.addSpace();
