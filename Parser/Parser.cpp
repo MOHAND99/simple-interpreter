@@ -17,7 +17,7 @@ Statement* Parser::parse(string statement, unordered_map<string, double> *variab
     string statWithoutComment = removeComment(statement);
     StatementType  type = StatementValidator::validate(statWithoutComment);
     if(type==ASSIGNMENT){
-        AssignmentStatement *assignmentStatement = new AssignmentStatement(statWithoutComment,variables);
+        AssignmentStatement *assignmentStatement = new AssignmentStatement(statWithoutComment);
         return assignmentStatement;
     } else if (type==INVALID){
         std::cout<<"Invalid Statement"<<endl;

@@ -8,8 +8,8 @@ const string &AssignmentStatement::getValueExpression() const {
     return valueExpression;
 }
 
-AssignmentStatement::AssignmentStatement(string statement, unordered_map<string, double> *variables)
-        : Statement(statement, variables) {
+AssignmentStatement::AssignmentStatement(string statement)
+        : Statement(statement) {
     int i = 0;
     while (statement[i] == ' ') i++; // skip any whitespaces at beginning.
     variableName = "";

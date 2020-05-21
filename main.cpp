@@ -9,9 +9,8 @@ using namespace std;
 int main() {
     FileReader fileReader("file.txt");
     string statement="   ";
-
+    Interpretation interpretation;
     while (statement.size()!=0) {
-        Interpretation interpretation;
         statement = fileReader.readNextLine();
         interpretation.process(statement);
     }
