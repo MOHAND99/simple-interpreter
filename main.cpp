@@ -1,10 +1,22 @@
 #include <iostream>
 #include <string>
 #include "Evaluation/ExpressionEvaluator.h"
+#include "FileReader.h"
+#include "Interpretation.h"
 
 using namespace std;
 
 int main() {
+    FileReader fileReader("file.txt");
+    string statement="   ";
+
+    while (statement.size()!=0) {
+        Interpretation interpretation;
+        statement = fileReader.readNextLine();
+        interpretation.process(statement);
+    }
+
+
 //    FileReader reader("Src.txt");
 //    Interpretation compilation;
 //    string line;
@@ -17,23 +29,8 @@ int main() {
 //        // TODO: Add the variable to BST and heap.
 //
 //    }
-    while (true) {
-        cout << "> ";
-        string line;
-        getline(cin, line);
-        unordered_map<string, double> map;
-        ExpressionEvaluator eval(line, map);
-        try {
-            double result = eval.evaluate();
-            cout << "The result is: " << result << endl << endl;
-        } catch (const char *e) {
-            cout << e << endl;
-        } catch (string e) {
-            cout << e << endl;
-        }
 
 
-    }
 
     return 0;
 }

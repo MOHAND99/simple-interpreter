@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #include "ExpressionEvaluator.h"
 
-ExpressionEvaluator::ExpressionEvaluator(string expression, unordered_map<string, double> variables) {
+ExpressionEvaluator::ExpressionEvaluator(string expression, unordered_map<string, double> *variables) {
     this->expression = expression;
     this->variables = variables;
 }
@@ -100,8 +100,8 @@ string ExpressionEvaluator::convertToPostfix() {
                     variableName.push_back(expression[i++]);
                 }
                 i--; // prevent skipping a character.
-                unordered_map<string, double>::const_iterator foundValue = variables.find(variableName);
-                if (foundValue == variables.end()) {
+                unordered_map<string, double>::const_iterator foundValue = variables->find(variableName);
+                if (foundValue == variables->end()) {
                     throw "Undeclared variable '" + variableName + "'\n";
                 } else {
                     result += " " + to_string(foundValue->second);

@@ -9,7 +9,7 @@ using namespace std;
 class ExpressionEvaluator {
 private:
     string expression;
-    unordered_map<string, double> variables;
+    unordered_map<string, double> *variables;
     bool isOperation(char c);
     string convertToPostfix();
     bool isHigherOrEqualPriority(char op1, char op2);
@@ -19,7 +19,7 @@ private:
     double performOperation(double num1, double num2, char op);
 
 public:
-    ExpressionEvaluator(string expression, unordered_map<string, double> variables);
+    ExpressionEvaluator(string expression, unordered_map<string, double> *variables);
     double evaluate();
 };
 

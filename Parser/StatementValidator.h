@@ -3,6 +3,7 @@
 
 #include <string>
 #include "StatementType.h"
+#include "../Statements/AssignmentStatement.h"
 
 using namespace std;
 
