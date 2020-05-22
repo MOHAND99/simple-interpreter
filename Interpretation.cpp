@@ -7,15 +7,12 @@ unordered_map<string, double> *Interpretation::getMap() {
 
 void Interpretation::process(string line) {
     //(*variables)["Q"]=2.5;
-    Statement *assignmentStatement;
-    assignmentStatement = Parser::parse(line, variables);
-    if (assignmentStatement!=NULL){
-        (assignmentStatement)->execute(variables);
+    Statement *statement;
+    statement = Parser::parse(line, variables);
+    if (statement!=NULL){
+        (statement)->execute(variables);
     } else{
         cout<<"Error "<<endl;
     }
 }
 
-Interpretation::Interpretation() {
-
-}

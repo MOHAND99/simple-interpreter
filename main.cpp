@@ -8,16 +8,17 @@ using namespace std;
 
 int main() {
     FileReader fileReader("file.txt");
-    string statement="   ";
+    string statement="";
     Interpretation interpretation;
     try {
-        while (statement.size()!=0) {
+        while (true) {
             statement = fileReader.readNextLine();
             interpretation.process(statement);
         }
     }catch (...){
         cout<<"The file has been readed "<<endl;
     }
+
     unordered_map<string, double> *map = interpretation.getMap();
     for (auto m : (*map)) {
         cout<<"Key : "<<m.first<<" Value : "<<m.second<<endl;

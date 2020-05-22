@@ -12,7 +12,6 @@ class Interpretation {
 private:
   unordered_map<string, double> *variables = new unordered_map<string, double>();
 public:
-    Interpretation();
     void process(string line);
     unordered_map<string, double> *getMap();
 
