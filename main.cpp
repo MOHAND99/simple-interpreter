@@ -10,10 +10,20 @@ int main() {
     FileReader fileReader("file.txt");
     string statement="   ";
     Interpretation interpretation;
-    while (statement.size()!=0) {
-        statement = fileReader.readNextLine();
-        interpretation.process(statement);
+    try {
+        while (statement.size()!=0) {
+            statement = fileReader.readNextLine();
+            interpretation.process(statement);
+        }
+    }catch (...){
+        cout<<"The file has been readed "<<endl;
     }
+    unordered_map<string, double> *map = interpretation.getMap();
+    for (auto m : (*map)) {
+        cout<<"Key : "<<m.first<<" Value : "<<m.second<<endl;
+    }
+
+
 
 
 //    FileReader reader("Src.txt");

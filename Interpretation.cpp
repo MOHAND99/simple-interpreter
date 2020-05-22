@@ -6,7 +6,7 @@ unordered_map<string, double> *Interpretation::getMap() {
 }
 
 void Interpretation::process(string line) {
-    (*variables)["Q"]=2.5;
+    //(*variables)["Q"]=2.5;
     Statement *assignmentStatement;
     assignmentStatement = Parser::parse(line, variables);
     if (assignmentStatement!=NULL){
