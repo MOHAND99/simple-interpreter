@@ -3,6 +3,7 @@
 
 enum StatementType {
     ASSIGNMENT,
+    GOTO,
     INVALID
 };
 

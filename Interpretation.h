@@ -9,6 +9,7 @@ using namespace std;
 class Interpretation {
 private:
     unordered_map<string, double> variables;
+    map<string,string> gotoMap;
 public:
     /*
      * Parse the line, then call execute on the returned statement.
