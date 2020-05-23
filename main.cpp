@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Evaluation/ExpressionEvaluator.h"
-#include "Statements/ifStatement.h"
+#include "Statements/IfStatement.h"
 
 using namespace std;
 
