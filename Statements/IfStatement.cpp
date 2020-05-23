@@ -4,7 +4,7 @@
 
 #include "IfStatement.h"
 
-bool IfStatement::isValid(string statement) {
+bool IfStatement::isValid(const string& statement) {
     int ifCount, colonCount;// counters for ifs and colons, they must be = 1 for valid if statement
     ifCount = colonCount = 0;
     if (statement.find("if") != std::string::npos)  ifCount++;

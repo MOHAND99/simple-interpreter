@@ -13,7 +13,7 @@ private:
     string statement;
     unordered_map<string, double> variables;
 public:
-    static bool isValid(string statement);
+    static bool isValid(const string& statement);
 };
 
 
