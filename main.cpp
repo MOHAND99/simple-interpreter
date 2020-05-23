@@ -2,11 +2,12 @@
 #include <string>
 #include "Interpretation.h"
 #include "FileReader.h"
-
+#include "Statements/GotoStatement.h"
 using namespace std;
 
 int main() {
-
+    bool t = GotStatement::isValid(" label labl s    : x+y");
+    cout<<t<<endl;
 //    Interpretation interpretation;
 //    try {
 //        FileReader reader("file.txt");
