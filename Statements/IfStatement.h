@@ -8,13 +8,16 @@
 
 class IfStatement : public Statement {
 private:
-    string statement;
-    unordered_map<string, double> variables;
     string conditionExpression;
     Statement conditioned_Statement;
 public:
     static bool isValid(const string& statement);
     void execute() override;
+
+    IfStatement(const string &statement, const unordered_map<string, &variables, const string &
+    conditionExpression,
+    const Statement &conditioned_Statement
+    );
 };
 
 
