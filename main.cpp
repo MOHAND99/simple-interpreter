@@ -2,6 +2,7 @@
 #include <string>
 #include "Interpretation.h"
 #include "FileReader.h"
+#include "Statements/IfStatement.h"
 
 using namespace std;
 
@@ -19,5 +20,6 @@ int main() {
     for (auto variable : map) {
         cout << variable.first << " = " << to_string(variable.second) << endl;
     }
+
     return 0;
 }

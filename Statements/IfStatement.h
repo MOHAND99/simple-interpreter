@@ -6,15 +6,15 @@
 #include <string>
 #include <iostream>
 
+
 class IfStatement : public Statement {
 private:
     string conditionExpression;
     Statement *conditioned_Statement;
 public:
+    IfStatement(const string &statement, unordered_map<string, double> *variables);
     static bool isValid(const string& statement);
     void execute() override;
-
-    IfStatement(const string &statement, unordered_map<string, double> *variables);
 };
 
 
