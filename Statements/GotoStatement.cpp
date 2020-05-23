@@ -13,7 +13,6 @@ bool GotStatement::isValid(string statement) {
     int labelIndex =-1;
     int gotoIndex=-1;
     int commaIndex =-1;
-    int space=0;
     labelIndex = statement.find_first_of("label");
     gotoIndex = statement.find_first_of("goto");
     commaIndex = statement.find_first_of(":");
@@ -27,10 +26,10 @@ bool GotStatement::isValid(string statement) {
         if (stat[labelIndex + 5] != ' ')
             return false;
         ///Check the label variable
-        for (int i = 0; i < label.length() - 1; i++) {
+        for (int i = 0; i < (int)label.length() - 1; i++) {
             if ((isdigit(pointerStat[i]) || !isdigit(pointerStat[i]) || isalpha(pointerStat[i])) &&
                 pointerStat[i + 1] == ' ') {
-                for (int j = i + 1; j < label.length() - 1; j++) {
+                for (int j = i + 1; j < (int)label.length() - 1; j++) {
                     if (pointerStat[j] != ' ') {
                         return false;
                     }
@@ -53,10 +52,10 @@ bool GotStatement::isValid(string statement) {
         std::copy(label.begin(), label.end(), pointerStat);
         pointerStat[label.length()] = '\0';
         ///Check the label variable
-        for (int i = 0; i < label.length() - 1; i++) {
+        for (int i = 0; i < (int)label.length() - 1; i++) {
             if ((isdigit(pointerStat[i]) || !isdigit(pointerStat[i]) || isalpha(pointerStat[i])) &&
                 pointerStat[i + 1] == ' ') {
-                for (int j = i + 1; j < label.length(); j++) {
+                for (int j = i + 1; j < (int)label.length(); j++) {
                     if (pointerStat[j] != ' ') {
                         return false;
                     }
@@ -77,14 +76,15 @@ bool GotStatement::isValid(string statement) {
 }
 
 void GotStatement::execute() {
+    string type= getType(statement);
+    if (type=="label"){
 
+    } else if (type=="label"){
+
+    }
 }
 
-GotStatement::GotStatement(string statement1, unordered_map<string, double> *variables, string statement,
-                               unordered_map<string, double> *variables1, map<string, string> *gotoMap)
-        : gotoMap(gotoMap), Statement(statement1, variables1) {
 
-}
 
 string GotStatement::getType(string statement) {
     int labelStatement = -1;
@@ -97,6 +97,10 @@ string GotStatement::getType(string statement) {
         return "goto";
     }
     return "Exception";
+}
+
+GotStatement::GotStatement(string statmenet, unordered_map<string, double> *variables, map<string, string> *gotoMap):gotoMap(gotoMap),Statement(statement,variables) {
+
 }
 
 

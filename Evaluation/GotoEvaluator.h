@@ -4,12 +4,14 @@
 
 #ifndef SIMPLE_INTERPRETER_GOTOEVALUATOR_H
 #define SIMPLE_INTERPRETER_GOTOEVALUATOR_H
-#include <map>
+#include <bits/stdc++.h>
 #include <string>
 using namespace std;
 class GotoEvaluator {
-private:
 
+public:
+    void evaluateGoTo(string statement,unordered_map<string, double> *variables,map<string,string> fileLine );
+    void  evaluateLable();
 
 };
 

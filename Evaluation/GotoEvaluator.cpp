@@ -3,3 +3,7 @@
 //
 
 #include "GotoEvaluator.h"
+
+void GotoEvaluator::evaluateLable() {
+
+}
