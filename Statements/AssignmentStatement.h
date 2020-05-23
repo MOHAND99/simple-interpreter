@@ -14,16 +14,16 @@ using namespace std;
 
 class AssignmentStatement : public Statement {
 private:
-    unordered_map<string, double> variables;
     string variableName;
     string valueExpression;
 
 public:
-    AssignmentStatement(string statement, unordered_map<string, double> variables);
+    AssignmentStatement(string statement, unordered_map<string, double> *variables);
     // Constructor will set variableName and valueExpression.
     // VariableName cannot be a reserved word, this should be handled in validation, not in this constructor.
     // Constructor here assumes that the statement is always correct.
     // Constructor needs variables map, so that execute method can put new value in it.
+
     void execute();
     static bool isValid(string statement);
     const string &getVariableName() const;
