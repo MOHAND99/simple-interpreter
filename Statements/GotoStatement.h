@@ -11,10 +11,13 @@
 class GotStatement : public Statement {
 private:
     map<string,string> *gotoMap ;
+    static string labelName;
+    static string labelExp;
 public:
     GotStatement(string statement1, unordered_map<string, double> *variables1, string statement,
                    unordered_map<string, double> *variables, map<string, string> *gotoMap);
     static bool isValid(string satement);
+    static string getType(string statement);
     void execute() override;
 };
 

@@ -6,7 +6,7 @@
 using namespace std;
 
 int main() {
-    bool t = GotStatement::isValid(" label labl s    : x+y");
+    bool t = GotStatement::isValid(" label 1x : x+y");
     cout<<t<<endl;
 //    Interpretation interpretation;
 //    try {
