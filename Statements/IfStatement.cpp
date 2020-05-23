@@ -32,7 +32,7 @@ IfStatement::IfStatement(const string &statement, unordered_map<string, double> 
     string colonSub = ": ", ifSub = "if ";
     colon_Pos = statement.find(colonSub);
     if_Pos = statement.find(ifSub);
-    conditionExpression = statement.substr(if_Pos + ifSub.size(), colon_Pos-1);//
+    conditionExpression = statement.substr(if_Pos + ifSub.size(), colon_Pos-1);
     conditioned_Statement = Parser::parse(statement.substr(colon_Pos + colonSub.size()), variables);
 }
 
