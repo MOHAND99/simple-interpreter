@@ -1,4 +1,5 @@
 #include "IfStatement.h"
+#include "../Parser/Parser.h"
 
 bool IfStatement::isValid(const string& statement) {
     int ifCount, colonCount, if_Pos;// counters for ifs and colons, they must be = 1 for valid if statement.
@@ -12,27 +13,17 @@ bool IfStatement::isValid(const string& statement) {
 }
 
 void IfStatement::execute() {
-        int coloun_Pos, if_Pos;
-        coloun_Pos = statement.find(':') != std::string::npos;
-        if_Pos = statement.find("if") != std::string::npos;
-        conditionExpression = conditioned_Statement = "";
-        conditionExpression = statement.substr(if_Pos+3, coloun_Pos-1);
-        //TODO: check comment exist if it isn't checked.
-        //TODO: create statement object from statement string.
+        //TODO: call evaluator to check if statement is true, then check this second if
+        if(conditioned_Statement) conditioned_Statement->execute();
 }
 
-IfStatement::IfStatement(const string &statement, unordered_map<string, &variables> string) {
-
+IfStatement::IfStatement(const string &statement, unordered_map<string, double> *variables) : Statement(statement,
+                                                                                                        variables) {
+    int coloun_Pos, if_Pos;
+    coloun_Pos = statement.find(':') != std::string::npos;
+    if_Pos = statement.find("if") != std::string::npos;
+    conditionExpression = "";
+    conditionExpression = statement.substr(if_Pos+3, coloun_Pos-1);
+    conditioned_Statement = Parser::parse(statement.substr(coloun_Pos+1), variables);
 }
 
-IfStatement::IfStatement(const string &statement, const unordered_map<string, &variables, const string &
-
-conditionExpression,
-const Statement &conditioned_Statement
-):
-Statement(statement, variables
-),
-
-conditionExpression (conditionExpression), conditioned_Statement(conditioned_Statement) {
-
-}

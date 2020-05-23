@@ -9,15 +9,12 @@
 class IfStatement : public Statement {
 private:
     string conditionExpression;
-    Statement conditioned_Statement;
+    Statement *conditioned_Statement;
 public:
     static bool isValid(const string& statement);
     void execute() override;
 
-    IfStatement(const string &statement, const unordered_map<string, &variables, const string &
-    conditionExpression,
-    const Statement &conditioned_Statement
-    );
+    IfStatement(const string &statement, unordered_map<string, double> *variables);
 };
 
 
