@@ -7,14 +7,13 @@
 
 #include <bits/stdc++.h>
 #include "Statement.h"
-
-class GotStatement : public Statement {
+class GotoStatement : public Statement {
 private:
     map<string,string> *gotoMap ;
-    static string labelName;
-    static string labelExp;
+     string labelName;
+     string labelExp;
 public:
-    GotStatement(string statmenet,unordered_map<string,double> *variables,map<string,string>*gotoMap);
+    GotoStatement(string statmenet,unordered_map<string,double> *variables,map<string,string>*gotoMap);
     static bool isValid(string satement);
     static string getType(string statement);
     void execute() override;

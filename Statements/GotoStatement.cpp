@@ -4,7 +4,7 @@
 
 #include "GotoStatement.h"
 
-bool GotStatement::isValid(string statement) {
+bool GotoStatement::isValid(string statement) {
     char stat[statement.length()];
     string label="";
     char pointerStat[statement.length()];
@@ -19,8 +19,6 @@ bool GotStatement::isValid(string statement) {
     ///if statement contain label
     if(labelIndex!=-1&&commaIndex!=-1) {
         label = statement.substr(labelIndex+5 , (commaIndex-labelIndex-5));
-        labelName = label;
-        labelExp = statement.substr(commaIndex,statement.length()-commaIndex);
         std::copy(label.begin(),label.end(),pointerStat);
         pointerStat[label.length()]='\0';
         if (stat[labelIndex + 5] != ' ')
@@ -48,7 +46,6 @@ bool GotStatement::isValid(string statement) {
         if (stat[gotoIndex + 4] != ' ')
             return false;
         label = statement.substr(gotoIndex + 4, statement.length() - gotoIndex - 4);
-        labelName = labelName;
         std::copy(label.begin(), label.end(), pointerStat);
         pointerStat[label.length()] = '\0';
         ///Check the label variable
@@ -75,7 +72,7 @@ bool GotStatement::isValid(string statement) {
     return true;
 }
 
-void GotStatement::execute() {
+void GotoStatement::execute() {
     string type= getType(statement);
     if (type=="label"){
 
@@ -86,7 +83,7 @@ void GotStatement::execute() {
 
 
 
-string GotStatement::getType(string statement) {
+string GotoStatement::getType(string statement) {
     int labelStatement = -1;
     int gotoStatement = -1;
     labelStatement = statement.find_first_of("label");
@@ -99,8 +96,9 @@ string GotStatement::getType(string statement) {
     return "Exception";
 }
 
-GotStatement::GotStatement(string statmenet, unordered_map<string, double> *variables, map<string, string> *gotoMap):gotoMap(gotoMap),Statement(statement,variables) {
-
+GotoStatement::GotoStatement(string statmenet, unordered_map<string, double> *variables, map<string, string> *gotoMap)
+:Statement(statement,variables) {
+    this->gotoMap = gotoMap;
 }
 
 
