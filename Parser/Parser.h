@@ -11,6 +11,9 @@ using namespace std;
 class Parser {
 public:
     static Statement *parse(string statement, unordered_map<string, double> *map);
+
+private:
+    static string checkLabel(string statement);
     /*
      * The `parse` method should validate the provided statement by using the StatementValidator.
      * After knowing its type, return a pointer to object of Statement.
