@@ -27,13 +27,14 @@ void IfStatement::execute() {
         if(conditioned_Statement) conditioned_Statement->execute();
 }
 
-IfStatement::IfStatement(const string &statement, unordered_map<string, Value> *variables) : Statement(statement,
-                                                                                                        variables) {
+IfStatement::IfStatement(const string &statement, unordered_map<string, Value> *variables
+        ,unordered_map<string,int> *labelMap,unordered_map<int,string> *fileData,int *lineInedx)
+        : Statement(statement,variables) {
     int colon_Pos, if_Pos;
     string colonSub = ": ", ifSub = "if ";
     colon_Pos = statement.find(colonSub);
     if_Pos = statement.find(ifSub);
     conditionExpression = statement.substr(if_Pos + ifSub.size(), colon_Pos-1);
-    conditioned_Statement = Parser::parse(statement.substr(colon_Pos + colonSub.size()), variables);
+    conditioned_Statement = Parser::parse(statement.substr(colon_Pos + colonSub.size()), variables,labelMap,fileData,lineInedx);
 }
 

@@ -7,14 +7,14 @@
 #include "../Statements/AssignmentStatement.h"
 #include "../Statements/IfStatement.h"
 #include "../Evaluation/Value.h"
-
+#include "../Statements/GotoStatement.h"
 
 using namespace std;
 
 class Parser {
 
 private:
-    static string checkLabel(string statement);
+    static string checkLabel(string statement,unordered_map<string,int> *labelMap,int *lineInedx);
 
 public:
     /*
@@ -23,7 +23,7 @@ public:
      * If the statement is INVALID, return NULL.
      * The Parser behaves like a factory of Statement.
      */
-    static Statement *parse(string statement, unordered_map<string, Value> *map);
+    static Statement *parse(string statement, unordered_map<string, Value> *map,unordered_map<string,int> *labelMap,unordered_map<int,string> *fileData,int *lineInedx);
 
 };
 

@@ -7,15 +7,18 @@
 
 #include <bits/stdc++.h>
 #include "Statement.h"
+#include "../Evaluation/GotoEvaluator.h"
 class GotoStatement : public Statement {
 private:
-    map<string,string> *gotoMap ;
-     string labelName;
-     string labelExp;
+    string lableName;
+    unordered_map<string,int> *labelMap;
+    unordered_map<int,string> *fileData;
+    int *lineInedx;
 public:
-    GotoStatement(string statement,unordered_map<string, Value> *variables,map<string,string>*gotoMap);
+    GotoStatement(string statement,unordered_map<string, Value> *variables,unordered_map<string,int> *labelMap,unordered_map<int,string> *fileData,int *lineInedx);
     static bool isValid(string statement);
     void execute() override;
+    void setLabelName(string name);
 };
 
 

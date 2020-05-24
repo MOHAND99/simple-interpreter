@@ -12,7 +12,8 @@ private:
     string conditionExpression;
     Statement *conditioned_Statement;
 public:
-    IfStatement(const string &statement, unordered_map<string, Value> *variables);
+    IfStatement(const string &statement,
+            unordered_map<string, Value> *variables,unordered_map<string,int> *labelMap,unordered_map<int,string> *fileData,int *lineInedx);
     static bool isValid(const string& statement);
     void execute() override;
 };

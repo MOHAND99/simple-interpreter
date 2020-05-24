@@ -46,20 +46,34 @@ bool GotoStatement::isValid(string statement) {
     }
     if (gotoIndex == -1)
         return false;
-
+    label.erase(remove(label.begin(), label.end(), ' '), label.end());
     return true;
 }
 
 void GotoStatement::execute() {
-
+    GotoEvaluator gotoEvaluator(lableName,variables,labelMap,fileData,lineInedx);
 }
 
 
 
 
-GotoStatement::GotoStatement(string statement, unordered_map<string, Value> *variables, map<string, string> *gotoMap)
+GotoStatement::GotoStatement(string statement, unordered_map<string, Value> *variables,
+        unordered_map<string,int> *labelMap,unordered_map<int,string> *fileData,int *lineInedx)
         : Statement(statement, variables) {
-    this->gotoMap = gotoMap;
+        this->labelMap=labelMap;
+        this->fileData=fileData;
+        this->lineInedx=lineInedx;
+}
+
+void GotoStatement::setLabelName(string statement) {
+    string keyWord= "goto";
+    string label = "";
+    int gotoIndex = -1;
+    gotoIndex = statement.find_first_of(keyWord);
+    label = statement.substr(gotoIndex + keyWord.length(), statement.length() - gotoIndex - keyWord.length());
+    label.erase(remove(label.begin(), label.end(), ' '), label.end());
+    cout<<"LABEL:"<<label<<"END"<<endl;
+    lableName = label;
 }
 
 
