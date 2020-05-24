@@ -9,8 +9,9 @@ bool IfStatement::isValid(const string& statement) {
     const string ifSub = "if ";
     const string colonSub = ": ";
     int i = 0;
-    while(statement[i] == ' ') i++;
+    while(statement[i] == ' ') i++;//skip spaces
     string no_spaces_statement = statement.substr(i);
+    if(no_spaces_statement.find(ifSub, 0)) return false; //if there any characters instead of
     while((unsigned int)(if_Pos = no_spaces_statement.find(ifSub, if_Pos)) != (unsigned int)std::string::npos){
         ifCount++; if_Pos += ifSub.size();
         if ((unsigned int)(colon_Pos = no_spaces_statement.find(colonSub, colon_Pos)) != (unsigned int)std::string::npos){
