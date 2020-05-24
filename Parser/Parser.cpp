@@ -23,16 +23,17 @@ Statement *Parser::parse(string statement, unordered_map<string, double> *map) {
 string Parser::checkLabel(string statement) {
     char stat[statement.length()];
     char pointerStat[statement.length()];
+    string keyWord="label";
     int startWithNumber = 0;
     string label = "";
     int labelIndex = -1;
     int commaIndex = -1;
-    labelIndex = statement.find_first_of("label");
+    labelIndex = statement.find_first_of(keyWord);
     commaIndex = statement.find_first_of(":");
     std::copy(statement.begin(), statement.end(), stat);
     ///if statement contain label
     if (labelIndex != -1 && commaIndex != -1) {
-        label = statement.substr(labelIndex + 5, (commaIndex - labelIndex - 5));
+        label = statement.substr(labelIndex + keyWord.length(), (commaIndex - labelIndex - keyWord.length()));
         std::copy(label.begin(), label.end(), pointerStat);
         pointerStat[label.length()] = '\0';
         if (stat[labelIndex + 5] != ' ')
