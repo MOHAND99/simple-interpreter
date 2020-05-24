@@ -57,7 +57,7 @@ void GotoStatement::execute() {
 
 
 
-GotoStatement::GotoStatement(string statement, unordered_map<string, double> *variables, map<string, string> *gotoMap)
+GotoStatement::GotoStatement(string statement, unordered_map<string, Value> *variables, map<string, string> *gotoMap)
         : Statement(statement, variables) {
     this->gotoMap = gotoMap;
 }

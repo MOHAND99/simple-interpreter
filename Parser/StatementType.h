@@ -4,7 +4,9 @@
 enum StatementType {
     ASSIGNMENT,
     GOTO,
-    INVALID
+    INVALID,
+    IF
+
 };
 
 #endif //SIMPLE_INTERPRETER_STATEMENTTYPE_H

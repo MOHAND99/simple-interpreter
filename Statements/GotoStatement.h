@@ -13,7 +13,7 @@ private:
      string labelName;
      string labelExp;
 public:
-    GotoStatement(string statement,unordered_map<string,double> *variables,map<string,string>*gotoMap);
+    GotoStatement(string statement,unordered_map<string, Value> *variables,map<string,string>*gotoMap);
     static bool isValid(string statement);
     void execute() override;
 };
