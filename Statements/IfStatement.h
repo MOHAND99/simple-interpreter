@@ -12,7 +12,7 @@ private:
     string conditionExpression;
     Statement *conditioned_Statement;
 public:
-    IfStatement(const string &statement, unordered_map<string, double> *variables);
+    IfStatement(const string &statement, unordered_map<string, Value> *variables);
     static bool isValid(const string& statement);
     void execute() override;
 };

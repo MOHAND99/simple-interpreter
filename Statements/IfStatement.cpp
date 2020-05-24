@@ -27,7 +27,7 @@ void IfStatement::execute() {
         if(conditioned_Statement) conditioned_Statement->execute();
 }
 
-IfStatement::IfStatement(const string &statement, unordered_map<string, double> *variables) : Statement(statement,
+IfStatement::IfStatement(const string &statement, unordered_map<string, Value> *variables) : Statement(statement,
                                                                                                         variables) {
     int colon_Pos, if_Pos;
     string colonSub = ": ", ifSub = "if ";
