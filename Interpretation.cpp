@@ -5,6 +5,7 @@ void Interpretation::process(string line) {
     Statement *statement = Parser::parse(line, &variables);
     if (statement != NULL) {
         statement->execute();
+        delete statement;
     }
 
 }
