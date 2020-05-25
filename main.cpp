@@ -2,7 +2,7 @@
 #include <string>
 #include "Interpretation.h"
 #include "FileReader.h"
-#include "sort.h"
+#include "SortVariables.h"
 
 using namespace std;
 
@@ -18,7 +18,7 @@ int main() {
     } catch (char const* ex) {
         cout << ex << endl;
     }
-    sort(interpretation.getVariables());
+    sortVariables(interpretation.getVariables());
     return 0;
 }
 

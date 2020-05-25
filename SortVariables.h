@@ -1,5 +1,5 @@
-#ifndef SIMPLE_INTERPRETER_SORT_H
-#define SIMPLE_INTERPRETER_SORT_H
+#ifndef SIMPLE_INTERPRETER_SORTVARIABLES_H
+#define SIMPLE_INTERPRETER_SORTVARIABLES_H
 
 #include <string>
 #include "Evaluation/Value.h"
@@ -7,9 +7,9 @@
 #include "Collections/Heap.h"
 #include "Collections/BST.h"
 
-void sort(const unordered_map<string, Value> &map);
+void sortVariables(const unordered_map<string, Value> &map);
 
-void sort(const unordered_map<string, Value>&map) {
+void sortVariables(const unordered_map<string, Value>&map) {
     Heap<string, Value> heap(map.size());
     BST<string, Value> bst;
 
@@ -24,4 +24,4 @@ void sort(const unordered_map<string, Value>&map) {
     heap.print();
 }
 
-#endif //SIMPLE_INTERPRETER_SORT_H
+#endif //SIMPLE_INTERPRETER_SORTVARIABLES_H
