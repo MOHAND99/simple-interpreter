@@ -5,28 +5,25 @@ Statement *Parser::parse(string statement, unordered_map<string, Value> *map,uno
         ,unordered_map<int,string> *fileData,int *lineInedx) {
     // Read until you find '#', then stop.
     // The '#' character means the rest of the line is a comment.
-    statement = checkLabel(statement,labelMap,lineInedx);
+    statement = checkLabel(statement, labelMap, lineInedx);
     int lengthBeforeComment = 0;
-    while (statement[lengthBeforeComment] != '#' && lengthBeforeComment < (int)statement.length()) {
+    while (statement[lengthBeforeComment] != '#' && lengthBeforeComment < (int) statement.length()) {
         lengthBeforeComment++;
     }
-    cout<<statement<<endl;
+    cout << statement << endl;
     statement = statement.substr(0, lengthBeforeComment); // substr takes starting index and length.
     StatementType statementType = StatementValidator::validate(statement);
     if (statementType == ASSIGNMENT) {
         return new AssignmentStatement(statement, map);
-    } else if (statementType == IF){
-        return new IfStatement(statement, map,labelMap,fileData,lineInedx);
+    } else if (statementType == IF) {
+        return new IfStatement(statement, map, labelMap, fileData, lineInedx);
     } else if (statementType == GOTO) {
-        GotoStatement *gotoStatement = new GotoStatement(statement,map,labelMap,fileData,lineInedx);
+        GotoStatement *gotoStatement = new GotoStatement(statement, map, labelMap, fileData, lineInedx);
         gotoStatement->setLabelName(statement);
         return gotoStatement;
     } else if (statementType == INVALID) {
         return NULL;
-    }else {
-        throw string("Unexpected StatementType.\n");
     }
-    return NULL;
 }
 
 string Parser::checkLabel(string statement,unordered_map<string,int> *labelMap,int *lineIndex) {

@@ -3,7 +3,6 @@
 //
 
 #include "GotoEvaluator.h"
-
 int GotoEvaluator::getLabelIndex() {
     int labelLine = 0;
 //    unordered_map<string,int>::iterator it;
@@ -32,16 +31,35 @@ GotoEvaluator::GotoEvaluator(string variableName, unordered_map<string, Value> *
 void GotoEvaluator::evaluateGoTo() {
     int labelIndex = getLabelIndex();
     string statement="";
-    Interpretation interpretation;
-    interpretation.setLine(&labelIndex);
-    interpretation.setfFileDataMap(fileData);
-    interpretation.setLabelMap(labelMap);
-    interpretation.setVariablesMap(variables);
-    cout<<"Value is : "<<labelIndex<<endl;
-    cout<<"Value is : "<<gotoIndex<<endl;
+//    interpretation.setLine(&labelIndex);
+//    interpretation.setfFileDataMap(fileData);
+//    interpretation.setLabelMap(labelMap);
+//    interpretation.setVariablesMap(variables);
+//    cout<<"Value is : "<<labelIndex<<endl;
+//    cout<<"Value is : "<<gotoIndex<<endl;
     for (int i = labelIndex; i <=gotoIndex ; i++) {
         statement = fileData->find(i)->second;
-        interpretation.process(statement);
+        Statement *statementEvaluate =Parser::parse(statement,variables,labelMap,fileData,&i);
+        if (statementEvaluate != NULL) {
+            (fileData)->emplace(i,statement);
+            statementEvaluate->execute();
+            this->variables=statementEvaluate->getVariables();
+        }
+
+//        interpretation.process(statement);
     }
 
+//    cout<<"Value of x : "<<interpretation.getVariables()->find("x")->second.getIntValue()<<endl;
+   // setVariables(interpretation.getVariables());
+//    cout<<"Value of x : "<<interpretation.getVariables()->find("y")->second.getIntValue()<<endl;
 }
+
+unordered_map<string, Value> *GotoEvaluator::getVariables() {
+    return variables;
+}
+
+void GotoEvaluator::setVariables(unordered_map<string, Value> *variables) {
+    this->variables = variables;
+}
+
+

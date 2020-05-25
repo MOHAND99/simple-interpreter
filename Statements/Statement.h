@@ -14,7 +14,9 @@ protected:
     Statement(string statement, unordered_map<string, Value> *variables);
 
 public:
+    const string &getStatement() const; //for tests purposes
     virtual void execute() = 0;
+    unordered_map<string, Value> *getVariables();
 };
 
 

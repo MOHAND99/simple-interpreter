@@ -9,9 +9,12 @@
 #include <string>
 #include "Value.h"
 #include "../Interpretation.h"
+#include "../Statements/Statement.h"
+#include "../Parser/Parser.h"
 using namespace std;
 class GotoEvaluator {
 private:
+    Interpretation interpretation;
     string labelName;
     int *lineIndex;
     int gotoIndex;
@@ -22,7 +25,8 @@ public:
     GotoEvaluator(string statement, unordered_map<string, Value> *map,unordered_map<string,int> *labelMap
             ,unordered_map<int,string> *fileData,int *lineIndex);
     void evaluateGoTo();
-
+    unordered_map<string, Value> *getVariables();
+    void setVariables(unordered_map<string, Value> *variables);
 private:
     int  getLabelIndex();
 

@@ -8,7 +8,7 @@ void Interpretation::process(string line) {
         fileData.emplace(lineIndex,line);
         statement->execute();
         lineIndex=incrementLineIndex();
-
+        setVariablesMap(statement->getVariables());
     }
 
 }
@@ -43,5 +43,9 @@ void Interpretation::setfFileDataMap(unordered_map<int, string> *fileData) {
 
 void Interpretation::setLabelMap(unordered_map<string, int> *labelMap) {
     this->labelMap=*labelMap;
+}
+
+unordered_map<string, Value> *Interpretation::getVariables() {
+    return &this->variables;
 }
 

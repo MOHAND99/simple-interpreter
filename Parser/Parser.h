@@ -12,7 +12,6 @@
 using namespace std;
 
 class Parser {
-
 private:
     static string checkLabel(string statement,unordered_map<string,int> *labelMap,int *lineInedx);
 

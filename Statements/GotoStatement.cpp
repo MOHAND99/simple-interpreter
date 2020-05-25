@@ -49,6 +49,10 @@ bool GotoStatement::isValid(string statement) {
 void GotoStatement::execute() {
     GotoEvaluator gotoEvaluator(lableName,variables,labelMap,fileData,lineInedx);
     gotoEvaluator.evaluateGoTo();
+    this->variables=gotoEvaluator.getVariables();
+    cout<<"Value of x : "<<variables->find("x")->second.getIntValue()<<endl;
+    cout<<"Value of y : "<<variables->find("y")->second.getIntValue()<<endl;
+    this->variables=this->getVariables();
 }
 
 

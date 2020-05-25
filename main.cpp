@@ -15,6 +15,7 @@ int main() {
 //    int lineIndex=5;
 //    Statement *statement  = Parser::parse("label x : y=10+50",&variables,&labelMap,&fileData,&lineIndex);
     Interpretation interpretation;
+
     try {
         FileReader reader("file.txt");
         while (true)
@@ -25,7 +26,7 @@ int main() {
         cout << ex << endl;
     }
     auto map = interpretation.getVariables();
-    for (auto variable : map) {
+    for (auto variable : *map) {
         cout << variable.first << " = " << variable.second.toString() << endl;
     }
 
