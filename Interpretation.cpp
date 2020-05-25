@@ -5,8 +5,8 @@ void Interpretation::process(string line) {
     Statement *statement = Parser::parse(line, &variables,&labelMap,&fileData,&lineIndex);
 
     if (statement != NULL) {
-        statement->execute();
         fileData.emplace(lineIndex,line);
+        statement->execute();
         lineIndex=incrementLineIndex();
 
     }
@@ -21,8 +21,8 @@ int Interpretation::getLine() {
     return lineIndex;
 }
 
-void Interpretation::setLine(int lineIndex) {
-    lineIndex=lineIndex;
+void Interpretation::setLine(int *lineIndex) {
+    this->lineIndex=*lineIndex;
 }
 
 int Interpretation::incrementLineIndex() {
@@ -31,5 +31,17 @@ int Interpretation::incrementLineIndex() {
 
 Interpretation::Interpretation() {
     lineIndex=1;
+}
+
+void Interpretation::setVariablesMap(unordered_map<string, Value> *variables) {
+    this->variables=*variables;
+}
+
+void Interpretation::setfFileDataMap(unordered_map<int, string> *fileData) {
+    this->fileData=*fileData;
+}
+
+void Interpretation::setLabelMap(unordered_map<string, int> *labelMap) {
+    this->labelMap=*labelMap;
 }
 

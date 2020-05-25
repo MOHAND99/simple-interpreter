@@ -23,8 +23,12 @@ public:
     void process(string line);
     unordered_map<string, Value> getVariables() const;
     int getLine();
-    void setLine(int lineIndex);
+    void setLine(int *lineIndex);
     int incrementLineIndex();
+    void setVariablesMap(unordered_map<string, Value> *variables);
+    void setfFileDataMap(unordered_map<int,string> *fileData);
+    void setLabelMap(unordered_map<string, int> *labelMap);
+
 
 };
 

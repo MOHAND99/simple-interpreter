@@ -67,14 +67,13 @@ string Parser::checkLabel(string statement,unordered_map<string,int> *labelMap,i
             }
         }
     }
+    if (labelIndex==-1||commaIndex==-1)
+        return statement;
     statement = statement.substr(commaIndex+1, (statement.length() -commaIndex));
-    string savedLabel="";
-
     label.erase(remove(label.begin(), label.end(), ' '), label.end());
-
     cout<<"LABEL:"<<label<<"END"<<endl;
     //cout<<"LABEL:"<<*(lineIndex)<<"END"<<endl;
-    (labelMap)->insert(pair<string,int>(savedLabel,*lineIndex));
+    (labelMap)->insert(pair<string,int>(label,*lineIndex));
     return statement;
 }
 

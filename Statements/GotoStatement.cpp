@@ -52,6 +52,7 @@ bool GotoStatement::isValid(string statement) {
 
 void GotoStatement::execute() {
     GotoEvaluator gotoEvaluator(lableName,variables,labelMap,fileData,lineInedx);
+    gotoEvaluator.evaluateGoTo();
 }
 
 
