@@ -30,8 +30,6 @@ Statement *Parser::parse(string statement, unordered_map<string, Value> *map,uno
 }
 
 string Parser::checkLabel(string statement,unordered_map<string,int> *labelMap,int *lineIndex) {
-    char stat[statement.length()];
-    char pointerStat[statement.length()];
     string keyWord="label";
     int startWithNumber = 0;
     string label = "";
@@ -39,30 +37,28 @@ string Parser::checkLabel(string statement,unordered_map<string,int> *labelMap,i
     int commaIndex = -1;
     labelIndex = statement.find_first_of(keyWord);
     commaIndex = statement.find_first_of(":");
-    std::copy(statement.begin(), statement.end(), stat);
     ///if statement contain label
     if (labelIndex != -1 && commaIndex != -1) {
         label = statement.substr(labelIndex + keyWord.length(), (commaIndex - labelIndex - keyWord.length()));
-        std::copy(label.begin(), label.end(), pointerStat);
-        pointerStat[label.length()] = '\0';
-        if (stat[labelIndex + keyWord.length()] != ' ')
+        label[label.length()] = '\0';
+        if (statement[labelIndex + keyWord.length()] != ' ')
             return statement;
         ///Check the label variable
         for (int i = 0; i < (int) label.length() - 1; i++) {
-            if ((isdigit(pointerStat[i]) || !isdigit(pointerStat[i]) || isalpha(pointerStat[i])) &&
-                pointerStat[i + 1] == ' ') {
+            if ((isdigit(label[i]) || !isdigit(label[i]) || isalpha(label[i])) &&
+                    label[i + 1] == ' ') {
                 for (int j = i + 1; j < (int) label.length() - 1; j++) {
-                    if (pointerStat[j] != ' ') {
+                    if (label[j] != ' ') {
                         return statement;
                     }
                 }
                 break;
-            } else if (startWithNumber == 0 && pointerStat[i] != ' ') {
-                if (isdigit(pointerStat[i]) && !isalpha(pointerStat[i])) {
+            } else if (startWithNumber == 0 && label[i] != ' ') {
+                if (isdigit(label[i]) && !isalpha(label[i])) {
                     return statement;
                 }
                 startWithNumber++;
-            }else if (startWithNumber!=0&&(!isalpha(pointerStat[i])&&!isdigit(pointerStat[i])&&pointerStat[i]!='_')){
+            }else if (startWithNumber!=0&&(!isalpha(label[i])&&!isdigit(label[i])&&label[i]!='_')){
                 return statement;
             }
         }
