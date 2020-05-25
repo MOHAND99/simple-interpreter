@@ -33,7 +33,7 @@ public:
     void inOrder() {
         cout << "sorted by variable name" << endl;
         inOrder(root);
-        cout << "\n\n";
+        cout << endl << endl;
     }
 
 private:
