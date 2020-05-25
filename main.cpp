@@ -8,6 +8,7 @@ using namespace std;
 
 int main() {
     Interpretation interpretation;
+
     try {
         FileReader reader("Src.txt");
         while (true)
@@ -18,7 +19,9 @@ int main() {
     } catch (char const* ex) {
         cout << ex << endl;
     }
+
     sortVariables(interpretation.getVariables());
+
     return 0;
 }
 

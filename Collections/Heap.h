@@ -114,7 +114,7 @@ public:
         cout << "sorted by value :" << endl; /// assuming it is sorted
         for(unsigned int i = 0; i < arr.size(); ++i)
             cout << "Key : " << (k) arr[i]->key << " Value : " << (v) arr[i]->value << endl;
-        cout << "\n\n";
+        cout << endl << endl;
     }
     
 };
