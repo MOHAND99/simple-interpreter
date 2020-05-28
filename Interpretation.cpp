@@ -68,11 +68,11 @@ string Interpretation::checkLabel(string statement, string *labelName) {
         if ((isalpha(variable[j]) || isdigit(variable[j]) || variable[j] == '_') && variable[j + 1] == ' ') {
             for (int k = j + 1; k < (int) variable.length(); k++) {
                 if (isalpha(variable[k]) || isdigit(variable[k]) || variable[k] == '_')
-                    return statement;
+                    throw string("Invalid Variable");
             }
         }
         if (!isalpha(variable[j]) && !isdigit(variable[j]) && variable[j] != '_'&&variable[j]!=' ') {
-            return statement;
+            throw string("Invalid Variable");
         }
     }
     ///Trim space from the variable
