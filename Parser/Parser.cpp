@@ -26,10 +26,11 @@ Statement *Parser::parse(string statement, unordered_map<string, Value> *map,uno
     }
 }
 
+
 string Parser::checkLabel(string statement,unordered_map<string,int> *labelMap,int *lineIndex) {
     string keyWord="label";
-    int startWithNumber = 0;
     string label = "";
+    int startWithNumber = 0;
     int labelIndex = -1;
     int commaIndex = -1;
     labelIndex = statement.find_first_of(keyWord);

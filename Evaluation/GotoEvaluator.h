@@ -14,7 +14,6 @@
 using namespace std;
 class GotoEvaluator {
 private:
-    Interpretation interpretation;
     string labelName;
     int *lineIndex;
     int gotoIndex;

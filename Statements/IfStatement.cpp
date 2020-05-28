@@ -33,21 +33,21 @@ void IfStatement::execute() {
     ExpressionEvaluator evaluator(conditionExpression, *variables);
     Value value = evaluator.evaluate();
     if (value.isBoolValue()) {
-        if (value.getBoolValue())
+        if (value.getBoolValue()) {
             conditioned_Statement->execute();
-            this->variables=conditioned_Statement->getVariables();
-
-    }else{
-        throw string("if condition evaluate must return a boolean value.\n");
+            this->variables = conditioned_Statement->getVariables();
+        } else {
+            throw string("if condition evaluate must return a boolean value.\n");
+        }
     }
-    this->variables=conditioned_Statement->getVariables();
-    cout<<"Value IS : "<<this->variables->find("x")->second.getIntValue()<<endl;
+    this->variables = conditioned_Statement->getVariables();
+    cout << "Value IS : " << this->variables->find("x")->second.getIntValue() << endl;
 }
 
 //<<<<<<< HEAD
-IfStatement::IfStatement(const string &statement, unordered_map<string, Value> *variables
-        ,unordered_map<string,int> *labelMap,unordered_map<int,string> *fileData,int *lineInedx)
-        : Statement(statement,variables) {
+IfStatement::IfStatement(const string &statement, unordered_map<string, Value> *variables,
+                         unordered_map<string, int> *labelMap, unordered_map<int, string> *fileData, int *lineInedx)
+        : Statement(statement, variables) {
 //=======
 //IfStatement::IfStatement(const string &statement, unordered_map<string, Value> *variables) : Statement(statement,
 //                                                                                                       variables) {
@@ -57,13 +57,14 @@ IfStatement::IfStatement(const string &statement, unordered_map<string, Value> *
     colon_Pos = statement.find(colonSub);
     if_Pos = statement.find(ifSub);
 //<<<<<<< HEAD
-   // conditionExpression = statement.substr(if_Pos + ifSub.size(), colon_Pos-1);
-    conditioned_Statement = Parser::parse(statement.substr(colon_Pos + colonSub.size()), variables,labelMap,fileData,lineInedx);
+    // conditionExpression = statement.substr(if_Pos + ifSub.size(), colon_Pos-1);
+    conditioned_Statement = Parser::parse(statement.substr(colon_Pos + colonSub.size()), variables, labelMap, fileData,
+                                          lineInedx);
 //=======
     int start = if_Pos + ifSub.size();
     conditionExpression = statement.substr(start, colon_Pos - start);
 //    conditioned_Statement = Parser::parse(statement.substr(colon_Pos + colonSub.size()), variables);
-    if(!conditioned_Statement)
+    if (!conditioned_Statement)
         throw string("Not valid conditioned statement\n");
 }
 

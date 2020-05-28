@@ -31,12 +31,6 @@ GotoEvaluator::GotoEvaluator(string variableName, unordered_map<string, Value> *
 void GotoEvaluator::evaluateGoTo() {
     int labelIndex = getLabelIndex();
     string statement="";
-//    interpretation.setLine(&labelIndex);
-//    interpretation.setfFileDataMap(fileData);
-//    interpretation.setLabelMap(labelMap);
-//    interpretation.setVariablesMap(variables);
-//    cout<<"Value is : "<<labelIndex<<endl;
-//    cout<<"Value is : "<<gotoIndex<<endl;
     for (int i = labelIndex; i <=gotoIndex ; i++) {
         statement = fileData->find(i)->second;
         Statement *statementEvaluate =Parser::parse(statement,variables,labelMap,fileData,&i);

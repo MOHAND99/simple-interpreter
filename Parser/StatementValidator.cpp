@@ -11,6 +11,7 @@ StatementType StatementValidator::validate(string statement) {
     else if(GotoStatement::isValid(statement)){
         return GOTO;
     } else {
+        cout <<"StatementValidator : " <<statement << endl;
         return INVALID;
     }
 }

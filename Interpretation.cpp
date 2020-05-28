@@ -1,16 +1,15 @@
 #include "Interpretation.h"
 #include "Parser/Parser.h"
 
-void Interpretation::process(string line) {
+void Interpretation::process(string line){
     Statement *statement = Parser::parse(line, &variables,&labelMap,&fileData,&lineIndex);
 
-    if (statement != NULL) {
+    if (statement != NULL){
         fileData.emplace(lineIndex,line);
         statement->execute();
         lineIndex=incrementLineIndex();
         setVariablesMap(statement->getVariables());
     }
-
 }
 
 unordered_map<string, Value> Interpretation::getVariables() const {
