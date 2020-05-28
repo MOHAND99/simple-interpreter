@@ -32,6 +32,7 @@ IfStatement::IfStatement(const string &statement, unordered_map<string, Value> *
                                                                                                       variables) {
     int colon_Pos = getColonPos();
     conditionExpression = statement.substr(ifSub.size(), colon_Pos - ifSub.size() );
+
     try{
         int i = colon_Pos + colonSub.size();
         while (statement[i] ==  ' ') i++;
