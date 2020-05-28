@@ -15,7 +15,7 @@ public:
      * Parse the line, then call execute on the returned statement.
      */
     void process(string line);
-
+    string checkLabel(string statement);
     unordered_map<string, Value> getVariables() const;
 };
 

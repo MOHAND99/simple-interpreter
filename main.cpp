@@ -10,7 +10,7 @@ int main() {
     Interpretation interpretation;
 
     try {
-        FileReader reader("Src.txt");
+        FileReader reader("file.txt");
         while (true){
             interpretation.process(reader.readNextLine());
         }
