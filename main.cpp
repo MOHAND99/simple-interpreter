@@ -13,7 +13,7 @@ string checkLabel(string statement){
     int length = statement.length();
     string variable;
     for (int i=0; i<length;i++) {
-        if (i==0&&statement[i]=='l'&&statement[i+1]=='a'&&statement[i+2]=='b'&&statement[i+3]=='e'
+        if (i==0&&length>5&&statement[i]=='l'&&statement[i+1]=='a'&&statement[i+2]=='b'&&statement[i+3]=='e'
             &&statement[i+4]=='l'&&statement[i+5]==' '){
             i=5;
             label=i;
@@ -34,7 +34,7 @@ string checkLabel(string statement){
                     return statement;
             }
         }
-        if (!isalpha(variable[j])&&!isdigit(variable[j])&&variable[j]!='_'){
+        if(!isalpha(variable[j])&&!isdigit(variable[j])&&variable[j]!='_'){
             return statement;
         }
     }

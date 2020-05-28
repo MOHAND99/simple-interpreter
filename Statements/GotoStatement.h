@@ -15,10 +15,8 @@ private:
     unordered_map<string,int> *labelMap;
     unordered_map<int,string> *fileData;
     int *lineInedx;
-    int gotoIndex;
 public:
-    GotoStatement(string statement,unordered_map<string, Value> *variables
-            ,unordered_map<string,int> *labelMap,unordered_map<int,string> *fileData,int *lineInedx);
+    GotoStatement(string statement,unordered_map<string, Value> *variables);
     static bool isValid(string statement);
     void execute() override;
     void setLabelName(string name);

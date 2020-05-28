@@ -55,17 +55,6 @@ void GotoStatement::execute() {
     this->variables=this->getVariables();
 }
 
-
-
-
-GotoStatement::GotoStatement(string statement, unordered_map<string, Value> *variables,
-        unordered_map<string,int> *labelMap,unordered_map<int,string> *fileData,int *lineInedx)
-        : Statement(statement, variables) {
-        this->labelMap=labelMap;
-        this->fileData=fileData;
-        this->lineInedx=lineInedx;
-}
-
 void GotoStatement::setLabelName(string statement) {
     string keyWord= "goto";
     string label = "";
@@ -75,6 +64,11 @@ void GotoStatement::setLabelName(string statement) {
     label.erase(remove(label.begin(), label.end(), ' '), label.end());
     cout<<"LABEL:"<<label<<"END"<<endl;
     lableName = label;
+}
+
+GotoStatement::GotoStatement(string statement, unordered_map<string, Value> *variables) : Statement(statement,
+                                                                                                    variables) {
+
 }
 
 
