@@ -6,11 +6,11 @@
 #include <string>
 #include "Evaluation/Value.h"
 #include "Statements/Statement.h"
+#include "Statements/GotoStatement.h"
 using namespace std;
 
 class Interpretation {
 private:
-    int lineNumber=0;
     unordered_map<string, Value> variables;
     list<Statement*> fileData;
     unordered_map<string,list<Statement*>::iterator> labelData;

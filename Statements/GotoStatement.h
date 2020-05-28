@@ -11,10 +11,14 @@ using namespace std;
 class GotoStatement :public Statement {
 private:
     string labelName;
-    list<string> *fileData;
+    list<Statement*> *fileData;
+    unordered_map<string,list<Statement*>::iterator> *labelData;
 public:
     GotoStatement(string statement, unordered_map<string, Value> *variables);
     void execute();
+    void setFileData(list<Statement*> *fileData);
+    void setLabelData(unordered_map<string,list<Statement*>::iterator> *labelData);
+    string checkGoto(string statement);
 
 };
 

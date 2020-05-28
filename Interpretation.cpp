@@ -21,12 +21,24 @@ void Interpretation::process(string line) {
     cout << statement << endl;
     fileData.push_back(statement);
     if ((labelName).length() != 0) {
-        list<Statement *>::iterator  it= fileData.end();
-        labelData.insert(pair<string, list<Statement*>::iterator>(labelName, it));
+        auto  iter = labelData.find(labelName);
+        try {
+            if (iter == labelData.end()) {
+                list<Statement *>::iterator it = fileData.end();
+                labelData.insert(pair<string, list<Statement *>::iterator>(labelName, it));
+            }
+        }catch (...){
+            cout<<"The label Variable has been defined befor"<<endl;
+        }
+
+
     }
-    if (statement != nullptr) {
-        statement->execute();
+    if (typeid(statement)== typeid(GotoStatement)){
+        ((GotoStatement&&)statement).setFileData(&fileData);
+        ((GotoStatement&&)statement).setLabelData(&labelData);
     }
+    statement->execute();
+
 
 }
 
@@ -47,7 +59,7 @@ string Interpretation::checkLabel(string statement, string *labelName) {
             break;
         }
     }
-    if (comma == 0 || label == 0) {
+    if (comma == 0) {
         return statement;
     }
     variable = statement.substr(label + 1, comma - label - 1);
