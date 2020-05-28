@@ -12,8 +12,8 @@ class Interpretation {
 private:
     int lineNumber=0;
     unordered_map<string, Value> variables;
-    list<Statement> fileData;
-    unordered_map<string,list<Statement>::iterator> labelData;
+    list<Statement*> fileData;
+    unordered_map<string,list<Statement*>::iterator> labelData;
 
 public:
     /*

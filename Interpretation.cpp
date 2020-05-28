@@ -3,7 +3,7 @@
 
 void Interpretation::process(string line) {
     // Ignore leading whitespaces.
-    string labelName = "";
+    string labelName ="";
     char commentSymbol = '#';
     int startingIndex = 0;
     while (line[startingIndex] == ' ') startingIndex++;
@@ -19,11 +19,10 @@ void Interpretation::process(string line) {
     line = line.substr(startingIndex, endingIndex - startingIndex);
     Statement *statement = Parser::parse(line, &variables);
     cout << statement << endl;
-    lineNumber++;
-    fileData.push_back(*statement);
+    fileData.push_back(statement);
     if ((labelName).length() != 0) {
-        _List_iterator<Statement> it = find(fileData.begin(), fileData.end(), lineNumber);
-        labelData.insert(pair<string, list<Statement>::iterator>(labelName, it));
+        list<Statement *>::iterator  it= fileData.end();
+        labelData.insert(pair<string, list<Statement*>::iterator>(labelName, it));
     }
     if (statement != nullptr) {
         statement->execute();
@@ -53,14 +52,14 @@ string Interpretation::checkLabel(string statement, string *labelName) {
     }
     variable = statement.substr(label + 1, comma - label - 1);
     cout << "Var : " << variable << endl;
-    for (int j = 0; j <= (int) variable.length(); j++) {
+    for (int j = 0; j <= (int) variable.length()-1; j++) {
         if ((isalpha(variable[j]) || isdigit(variable[j]) || variable[j] == '_') && variable[j + 1] == ' ') {
             for (int k = j + 1; k < (int) variable.length(); k++) {
                 if (isalpha(variable[k]) || isdigit(variable[k]) || variable[k] == '_')
                     return statement;
             }
         }
-        if (!isalpha(variable[j]) && !isdigit(variable[j]) && variable[j] != '_') {
+        if (!isalpha(variable[j]) && !isdigit(variable[j]) && variable[j] != '_'&&variable[j]!=' ') {
             return statement;
         }
     }
