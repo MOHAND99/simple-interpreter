@@ -14,7 +14,7 @@ private:
     const string ifSub = "if ";
     const string colonSub = ":";
 
-    int getColonPos();
+    unsigned int getColonPos();
 
 public:
     IfStatement(const string &statement, unordered_map<string, Value> *variables);

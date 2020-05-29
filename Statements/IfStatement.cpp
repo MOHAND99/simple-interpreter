@@ -3,14 +3,13 @@
 #include "../Parser/Parser.h"
 #include "../Evaluation/ExpressionEvaluator.h"
 
-int IfStatement::getColonPos() {
+unsigned int IfStatement::getColonPos() {
     // if "if" isn't at first then this statement isn't if statement.
-    int ifPos = 0;
-    for(; ifPos < (int)ifSub.size(); ++ifPos){}
-    if(ifPos == (int) ifSub.size()){
-        int colon_Pos;
-        if ((unsigned int) (colon_Pos = statement.find(colonSub, ifSub.size())) !=
-            (unsigned int) std::string::npos && !ifPos) {
+    unsigned int ifPos = 0;
+    for (; ifPos < ifSub.size() && statement[ifPos] == ifSub[ifPos]; ++ifPos) {}
+    if (ifPos == ifSub.size()) {
+        unsigned int colon_Pos;
+        if ((colon_Pos = statement.find(colonSub, ifSub.size())) != std::string::npos) {
             return colon_Pos;
         }
     }
@@ -29,12 +28,12 @@ void IfStatement::execute() {
 }
 
 IfStatement::IfStatement(const string &statement, unordered_map<string, Value> *variables) : Statement(statement,
-                                                                                                      variables) {
-    int colon_Pos = getColonPos();
-    conditionExpression = statement.substr(ifSub.size(), colon_Pos - ifSub.size() );
-    try{
-        int i = colon_Pos + colonSub.size();
-        while (statement[i] ==  ' ') i++;
+                                                                                                       variables) {
+    unsigned int colon_Pos = getColonPos();
+    conditionExpression = statement.substr(ifSub.size(), colon_Pos - ifSub.size());
+    try {
+        unsigned int i = colon_Pos + colonSub.size();
+        while (statement[i] == ' ') i++;
         conditioned_Statement = Parser::parse(statement.substr(i), variables);
     } catch (string ex) {
         throw string("Not valid conditioned statement\n");
